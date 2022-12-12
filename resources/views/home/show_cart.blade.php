@@ -62,7 +62,7 @@
                 <div class="payment-method">
                     <h1>Proceed to pay</h1>
                     <a href="{{ url('cash_order') }}" class="btn btn-danger">Cash On Delivery</a>
-                    <a href="{{ url('') }}" class="btn btn-danger">Pay Using Card</a>
+                    <a href="{{ url('stripe', $total_price) }}" class="btn btn-danger">Pay Using Card</a>
                 </div>
             </div>
         <!-- footer start -->
