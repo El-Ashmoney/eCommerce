@@ -4,3 +4,7 @@ Setup
 3- add ecommerce database
 4- Run php artisan migrate
 5- Register in the website
+Sample Admin email ( admin@admin.com)
+Sample Admin password ( ++++++++)
+Sample user email ( user@user.com)
+Sample Admin password ( ++++++++)
