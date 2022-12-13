@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\StripePaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +45,4 @@ Route::get('/show_cart', [HomeController::class, 'show_cart']);
 Route::get('/remove_cart/{id}', [HomeController::class, 'remove_cart']);
 Route::get('/cash_order', [HomeController::class, 'cash_order']);
 Route::get('/stripe/{total_price}', [HomeController::class, 'stripe']);
+Route::post('stripe/{total_price}', [HomeController::class, 'stripePost'])->name('stripe.post');
