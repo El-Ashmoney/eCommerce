@@ -50,7 +50,7 @@
                     </div>
                 </div>
             @endforeach
-            <span style="padding: 10px 0">
+            <span style="padding: 10px 0" class="custom-paginate">
                 {!! $products->appends(Request::all())->links() !!}
             </span>
         </div>

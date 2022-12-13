@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Category;
+use PDF;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 
@@ -101,8 +102,13 @@ class AdminController extends Controller
         $order = Order::find($id);
         $order->delivery_status = "delivered";
         $order->payment_status = "paid";
-        $orderTitle = $order->product_title;
         $order->save();
         return redirect()->back()->with('message', 'Order Status Changed To Delivered');
+    }
+
+    public function download_pdf($id){
+        $order = Order::find($id);
+        $pdf = PDF::loadView('admin.pdf', compact('order'));
+        return $pdf->download('order_details.pdf');
     }
 }

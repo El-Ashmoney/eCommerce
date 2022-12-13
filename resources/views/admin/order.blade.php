@@ -33,6 +33,7 @@
                                 <th>Delivery Status</th>
                                 <th>Product Image</th>
                                 <th>Action</th>
+                                <th>Download</th>
                             </tr>
                             @foreach ($orders as $order)
                                 <tr>
@@ -52,6 +53,7 @@
                                             <a href="{{ url('deliver_order', $order->id) }}" class="btn btn-success">Delivered</a>
                                         @endif
                                     </td>
+                                    <td><a href="{{ url('download_pdf', $order->id) }}" class="btn btn-secondary">Download</a></td>
                                 </tr>
                             @endforeach
                         </table>
