@@ -44,6 +44,9 @@
                                 </tr>
                             @endforeach
                         </table>
+                        <div class="d-flex justify-content-center custom-paginate">
+                            {!! $orders->appends(Request::all())->links() !!}
+                        </div>
                     </div>
                 </div>
             </div>

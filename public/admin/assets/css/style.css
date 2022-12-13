@@ -21152,3 +21152,7 @@ div.tagsinput {
 .product table tr:first-of-type{background-image: linear-gradient(to left, #d41459, #911a6c);}
 .product table tr:first-of-type th{padding: 10px 0;}
 .order-panel h1{text-align: center;}
+.order-panel .custom-paginate svg{width: 5%;}
+.order-panel .custom-paginate div a, .order-panel .custom-paginate .flex span:first-of-type{background-color: #911A6B !important; color: #FFF;}
+.order-panel .custom-paginate nav div:first-of-type{margin-bottom: 20px;}
+.order-panel .custom-paginate a:hover{text-decoration: none;}

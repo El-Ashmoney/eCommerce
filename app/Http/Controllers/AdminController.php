@@ -6,6 +6,7 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
 
 class AdminController extends Controller
 {
@@ -86,7 +87,7 @@ class AdminController extends Controller
     }
 
     public function order(){
-        $orders = Order::all();
+        $orders = Order::paginate(6);
         return view('admin.order', compact('orders'));
     }
 
