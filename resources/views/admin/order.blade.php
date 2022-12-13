@@ -14,6 +14,12 @@
                 <div class="content-wrapper ">
                     <div class="product">
                         <h1>All Orders</h1>
+                        @if(session()->has('message'))
+                            <div class="alert alert-success">
+                                <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
+                                {{ session()->get('message') }}
+                            </div>
+                        @endif
                         <table>
                             <tr>
                                 <th>Name</th>
@@ -40,7 +46,12 @@
                                     <td>{{ $order->payment_status }}</td>
                                     <td>{{ $order->delivery_status }}</td>
                                     <td class=""><img class="order-img" src="/product/{{ $order->product_image }}" alt=""></td>
-                                    <td><a href="{{ url('delete_order', $order->id) }}" class="btn btn-danger" onclick="return confirm('Are you sure to delete the order')">Delete</a></td>
+                                    <td>
+                                        <a href="{{ url('delete_order', $order->id) }}" class="btn btn-danger" onclick="return confirm('Are you sure to delete the order')">Delete</a>
+                                        @if ($order->delivery_status == "processing")
+                                            <a href="{{ url('deliver_order', $order->id) }}" class="btn btn-success">Delivered</a>
+                                        @endif
+                                    </td>
                                 </tr>
                             @endforeach
                         </table>
