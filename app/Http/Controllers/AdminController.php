@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -82,5 +83,16 @@ class AdminController extends Controller
         $product = Product::find($id);
         $product->delete();
         return redirect()->back()->with('message', 'Product deleted Successfully');
+    }
+
+    public function order(){
+        $orders = Order::all();
+        return view('admin.order', compact('orders'));
+    }
+
+    public function delete_order($id){
+        $order = Order::find($id);
+        $order->delete();
+        return redirect()->back()->with('message', 'Order deleted Successfully');
     }
 }

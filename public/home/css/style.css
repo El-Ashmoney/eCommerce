@@ -1135,7 +1135,7 @@ form input[type="submit"]:focus {
 .hero_area .cart h1{margin: 10px 0; font-size: 30px; font-weight: bold;}
 .hero_area .cart .payment-method h1{margin: 15px 0; font-size: 25px;}
 .stripe-pay .header_section{font-size: 16px;}
-.payment-heading{text-align: center; font-size: 30px; margin: 15px 0}
+.payment-heading{text-align: center; font-size: 30px; margin: 50px 0}
 .panel .panel-title{font-size: 25px;}
 .panel .require-validation label{font-size: 15px;}
 .panel .require-validation .form-group .form-control{height: 40px; font-size: 15px;border: none; border-bottom: 2px solid #911a6c;}

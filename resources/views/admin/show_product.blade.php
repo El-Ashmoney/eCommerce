@@ -17,7 +17,6 @@
                         <h2>Products</h2>
                         <table>
                             <tr>
-                                <th>ID</th>
                                 <th>Title</th>
                                 <th>Description</th>
                                 <th>Quantity</th>
@@ -30,7 +29,6 @@
                             </tr>
                             @foreach ($products as $product)
                                 <tr>
-                                    <td>{{ $product->id }}</td>
                                     <td>{{ $product->title }}</td>
                                     <td>{{ $product->description }}</td>
                                     <td>{{ $product->quantity }}</td>

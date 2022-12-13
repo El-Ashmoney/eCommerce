@@ -43,13 +43,13 @@
                                     </div>
                                 @endif
                                 <form
-                                        role="form"
-                                        action="{{ route('stripe.post', $total_price) }}"
-                                        method="post"
-                                        class="require-validation"
-                                        data-cc-on-file="false"
-                                        data-stripe-publishable-key="{{ env('STRIPE_KEY') }}"
-                                        id="payment-form">
+                                    role="form"
+                                    action="{{ route('stripe.post', $total_price) }}"
+                                    method="post"
+                                    class="require-validation"
+                                    data-cc-on-file="false"
+                                    data-stripe-publishable-key="{{ env('STRIPE_KEY') }}"
+                                    id="payment-form">
                                     @csrf
                                     <div class='form-row row'>
                                         <div class='col-xs-12 form-group required'>
@@ -84,7 +84,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-12">
-                                            <input class="pay-now btn btn-primary btn-lg btn-block" type="submit" value="Pay Now ( ${{ $total_price }} )">
+                                            <input class="pay-now btn btn-primary btn-lg" type="submit" value="Pay Now ( ${{ $total_price }} )">
                                         </div>
                                     </div>
                                 </form>
@@ -154,6 +154,14 @@
             }
         });
     </script>
+    <!-- footer start -->
+    @include('home.footer')
+    <!-- footer end -->
+    <div class="cpy_">
+        <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
+            Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+        </p>
+    </div>
     <!-- jQery -->
     <script src="jhome/js/jquery-3.4.1.min.js"></script>
     <!-- popper js -->

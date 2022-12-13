@@ -21148,7 +21148,7 @@ div.tagsinput {
 .add_product label{display: inline-block; width: 200px;}
 .add_product div{padding-bottom: 15px;}
 .product table{margin: 30px auto; width: 90%; text-align: center; border: 5px solid #d41459;}
-.content-wrapper .product table .product-img{width: 100px; height: 100px;}
+.content-wrapper .product table .product-img, .order-img{width: 100px; height: 100px;}
 .product table tr:first-of-type{background-image: linear-gradient(to left, #d41459, #911a6c);}
 .product table tr:first-of-type th{padding: 10px 0;}
-
+.order-panel h1{text-align: center;}
