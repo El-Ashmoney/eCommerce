@@ -21147,10 +21147,11 @@ div.tagsinput {
 .main-panel .content-wrapper .category_table{margin: auto; margin-top: 30px; width: 50%; text-align: center; border: 2px solid #911A6B;}
 .add_product label{display: inline-block; width: 200px;}
 .add_product div{padding-bottom: 15px;}
-.product table{margin: 30px auto; width: 90%; text-align: center; border: 5px solid #d41459;}
+.product table{margin: 30px auto; width: 100%; text-align: center; border: 5px solid #d41459;}
 .content-wrapper .product table .product-img, .order-img{width: 100px; height: 100px;}
 .product table tr:first-of-type{background-image: linear-gradient(to left, #d41459, #911a6c);}
 .product table tr:first-of-type th{padding: 10px 0;}
+.product table tr td{border-bottom: 1px solid #242424;}
 .order-panel h1{text-align: center;}
 .order-panel .custom-paginate svg{width: 5%;}
 .order-panel .custom-paginate div a, .order-panel .custom-paginate .flex span:first-of-type{background-color: #911A6B !important; color: #FFF;}
