@@ -27,8 +27,8 @@
                                 <th>Phone</th>
                                 <th>Address</th>
                                 <th>Product Title</th>
-                                <th>Product Quantity</th>
-                                <th>Product Price</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
                                 <th>Payment Status</th>
                                 <th>Delivery Status</th>
                                 <th>Product Image</th>
