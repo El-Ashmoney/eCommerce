@@ -21157,3 +21157,7 @@ div.tagsinput {
 .order-panel .custom-paginate div a, .order-panel .custom-paginate .flex span:first-of-type{background-color: #911A6B !important; color: #FFF;}
 .order-panel .custom-paginate nav div:first-of-type{margin-bottom: 20px;}
 .order-panel .custom-paginate a:hover{text-decoration: none;}
+.send-email h1{text-align: center;}
+.send-email .email-greeting:first-of-type{margin-top: 80px;}
+.send-email .email-greeting{margin-top: 20px; padding-left: 35%;}
+.send-email .email-greeting label{display: inline-block; width: 300px;}

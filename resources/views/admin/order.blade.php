@@ -11,7 +11,7 @@
             <!-- partial -->
             @include('admin.header')
             <div class="main-panel order-panel">
-                <div class="content-wrapper ">
+                <div class="content-wrapper">
                     <div class="product">
                         <h1>All Orders</h1>
                         @if(session()->has('message'))
@@ -55,7 +55,7 @@
                                         @endif
                                     </td>
                                     <td><a href="{{ url('download_pdf', $order->id) }}" class="btn btn-secondary">Download</a></td>
-                                    <td><a href="{{ url('', $order->id) }}" class="btn btn-info">Send Email</a></td>
+                                    <td><a href="{{ url('send_email', $order->id) }}" class="btn btn-info">Send Email</a></td>
                                 </tr>
                             @endforeach
                         </table>

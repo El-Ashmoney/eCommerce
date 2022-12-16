@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use PDF;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Category;
-use PDF;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
+use App\Notifications\EmailNotification;
+use Illuminate\Support\Facades\Notification;
 
 class AdminController extends Controller
 {
@@ -88,7 +90,7 @@ class AdminController extends Controller
     }
 
     public function order(){
-        $orders = Order::paginate(6);
+        $orders = Order::paginate(5);
         return view('admin.order', compact('orders'));
     }
 
@@ -110,5 +112,24 @@ class AdminController extends Controller
         $order = Order::find($id);
         $pdf = PDF::loadView('admin.pdf', compact('order'));
         return $pdf->download('order_details.pdf');
+    }
+
+    public function send_email($id){
+        $order = Order::find($id);
+        return view('admin.send_email', compact('order'));
+    }
+
+    public function send_user_email(Request $request, $id){
+        $order = Order::find($id);
+        $details = [
+            'greeting'      => $request->greeting,
+            'firstLine'     => $request->firstLine,
+            'emailBody'     => $request->emailBody,
+            'buttonName'    => $request->buttonName,
+            'emailUrl'      => $request->emailUrl,
+            'lastLine'      => $request->lastLine,
+        ];
+        Notification::send($order, new EmailNotification($details));
+        return redirect()->back();
     }
 }
