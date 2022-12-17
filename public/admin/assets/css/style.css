@@ -21147,16 +21147,21 @@ div.tagsinput {
 .main-panel .content-wrapper .category_table{margin: auto; margin-top: 30px; width: 50%; text-align: center; border: 2px solid #911A6B;}
 .add_product label{display: inline-block; width: 200px;}
 .add_product div{padding-bottom: 15px;}
-.product table{margin: 30px auto; width: 100%; text-align: center; border: 5px solid #d41459;}
+.product .greadient_border{padding: 3px 2px; background-image: linear-gradient(to left, #d41459, #911a6c)}
+.product table{margin: 30px auto; width: 100%; text-align: center; background-color: #000;}
 .content-wrapper .product table .product-img, .order-img{width: 100px; height: 100px;}
 .product table tr:first-of-type{background-image: linear-gradient(to left, #d41459, #911a6c);}
-.product table tr:first-of-type th{padding: 10px 0;}
+.product table tr:first-of-type th{padding: 0 0 25px 0;}
 .product table tr td{border-bottom: 1px solid #242424;}
+.order-panel .product table .no-data td{padding: 30px 0; color: red; font-size: 30px; font-weight: bold;}
 .order-panel h1{text-align: center;}
 .order-panel .custom-paginate svg{width: 5%;}
 .order-panel .custom-paginate div a, .order-panel .custom-paginate .flex span:first-of-type{background-color: #911A6B !important; color: #FFF;}
 .order-panel .custom-paginate nav div:first-of-type{margin-bottom: 20px;}
 .order-panel .custom-paginate a:hover{text-decoration: none;}
+.order-panel .order_search{margin: 20px 0 25px 0;}
+.order-panel .order_search input:first-of-type{width: 400px;}
+.order-panel .order_search input{padding: 3px;}
 .send-email h1{text-align: center;}
 .send-email .email-greeting:first-of-type{margin-top: 80px;}
 .send-email .email-greeting{margin-top: 20px; padding-left: 35%;}
