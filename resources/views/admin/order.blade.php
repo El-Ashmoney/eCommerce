@@ -61,7 +61,7 @@
                                                 <a href="{{ url('deliver_order', $order->id) }}" class="btn btn-success">Delivered</a>
                                             @endif
                                         </td>
-                                        <td><a href="{{ url('download_pdf', $order->id) }}" class="btn btn-secondary">Download</a></td>
+                                        <td><a href="{{ url('download_pdf', $order->id) }}" class="btn btn-info">Export to PDF</a></td>
                                         <td><a href="{{ url('send_email', $order->id) }}" class="btn btn-info">Send Email</a></td>
                                     </tr>
                                     @empty
@@ -71,9 +71,9 @@
                                 @endforelse
                             </table>
                         </div>
-                        <div style="margin: 30px 0" class="d-flex justify-content-center custom-paginate">
+                        {{-- <div style="margin: 30px 0" class="d-flex justify-content-center custom-paginate">
                             {!! $orders->appends(Request::all())->links() !!}
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
