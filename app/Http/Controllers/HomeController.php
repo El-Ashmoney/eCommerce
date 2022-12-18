@@ -146,4 +146,18 @@ class HomeController extends Controller
         Session::flash('success', 'Payment successful!');
         return back();
     }
+
+    public function show_order(){
+        $user = Auth::user();
+        $userId = $user->id;
+        $orders = Order::where('user_id', '=', $userId)->get();
+        return view('home.show_order', compact('orders'));
+    }
+
+    public function cancel_order($id){
+        $order = Order::find($id);
+        $order->delivery_status = ('Order canceled by the user');
+        $order->save();
+        return redirect()->back();
+    }
 }
