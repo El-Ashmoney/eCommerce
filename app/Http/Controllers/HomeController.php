@@ -30,8 +30,8 @@ class HomeController extends Controller
             foreach($order as $order_revenue){
                 $total_revenues = $total_revenues + $order_revenue->product_price;
             }
-            $delivered_orders = Order::where('delivery_status', '=', 'delivered')->get()->count();
-            $ongoing_orders = Order::where('delivery_status', '=', 'processing')->get()->count();
+            $delivered_orders   = Order::where('delivery_status', '=', 'delivered')->get()->count();
+            $ongoing_orders     = Order::where('delivery_status', '=', 'processing')->get()->count();
             return view('admin.home', compact('products', 'orders', 'users', 'total_revenues', 'delivered_orders', 'ongoing_orders'));
         }else{
             $products = Product::paginate(6);
