@@ -22,8 +22,8 @@
                         @endif
                         <div class="order_search">
                             <form action="{{ url('search_data') }}" method="GET">
-                                <input type="text" name="search" placeholder="Search for orders">
-                                <input type="submit" value="Search" class="btn btn-primary">
+                                <input type="text" name="search" placeholder="Search for orders by username">
+                                <input type="submit" value="Search" class="btn btn-primary" style="padding: 8px;">
                             </form>
                         </div>
                         <div class="greadient_border">
