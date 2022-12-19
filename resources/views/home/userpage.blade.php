@@ -1,25 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Basic -->
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- Mobile Metas -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <!-- Site Metas -->
-        <meta name="keywords" content="" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <link rel="shortcut icon" href="images/favicon.png" type="">
-        <title>Blank cart - Fashion</title>
-        <!-- bootstrap core css -->
-        <link rel="stylesheet" type="text/css" href="home/css/bootstrap.css" />
-        <!-- font awesome style -->
-        <link href="home/css/font-awesome.min.css" rel="stylesheet" />
-        <!-- Custom styles for this template -->
-        <link href="home/css/style.css" rel="stylesheet" />
-        <!-- responsive style -->
-        <link href="home/css/responsive.css" rel="stylesheet" />
+        @include('home.css')
     </head>
     <body>
         <div class="hero_area">
@@ -41,6 +23,38 @@
         <!-- product section -->
         @include('home.product')
         <!-- end product section -->
+
+        {{-- Comment Section --}}
+        <section class="comment_section subscribe_section">
+            <div class="container-fuild">
+                <div class="box">
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3">
+                            <div class="subscribe_form">
+                                @if (session()->has('message'))
+                                    <div class="alert alert-success">
+                                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
+                                        {{ session()->get('message') }}
+                                    </div>
+                                @endif
+                                <div class="heading_container heading_center">
+                                    <h3>Comment</h3>
+                                </div>
+                                <form action="{{ url('add_comment') }}" method="POST" class="comments_form">
+                                    @csrf
+                                    @auth
+                                        <textarea name="comment" id="" cols="30" rows="10" placeholder="Enter Your Comment"></textarea>
+                                        <input class="btn btn-primary btn-block" type="submit" value="Comment">
+                                    @endauth
+                                    <a href="{{ url('show_comments') }}" class="btn btn-primary btn-block">Show All Comments</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{-- Comment Section --}}
 
         <!-- subscribe section -->
         @include('home.subscribe')

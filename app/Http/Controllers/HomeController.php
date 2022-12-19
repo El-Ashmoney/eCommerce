@@ -7,6 +7,8 @@ use Stripe\Stripe;
 use App\Models\Cart;
 use App\Models\User;
 use App\Models\Order;
+use App\Models\Reply;
+use App\Models\Comment;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -159,5 +161,36 @@ class HomeController extends Controller
         $order->delivery_status = ('Order canceled by the user');
         $order->save();
         return redirect()->back();
+    }
+
+    public function show_comments(){
+        if(Auth::id()){
+            $comments = Comment::orderby('id','DESC')->get();
+            $replies = Reply::orderby('id','DESC')->get();
+            return view('home.show_comments', compact('comments', 'replies'));
+        }else{
+            return redirect('login');
+        }
+    }
+
+    public function add_comment(Request $request){
+        $user = Auth::user();
+        $comment = new Comment;
+        $comment->name      = $user->name;
+        $comment->user_id   = $user->id;
+        $comment->comment   = $request->comment;
+        $comment->save();
+        return redirect()->back()->with('message', 'Your Comment Has Been Sent');
+    }
+
+    public function add_reply(Request $request){
+        $user = Auth::user();
+        $reply = new Reply;
+        $reply->name        = $user->name;
+        $reply->reply       = $request->reply;
+        $reply->comment_id  = $request->commentId;
+        $reply->user_id     = $user->id;
+        $reply->save();
+        return redirect()->back()->with('message', 'Your Reply Has Been Sent');
     }
 }

@@ -11,7 +11,7 @@
                     <form action="">
                     <input type="email" placeholder="Enter your email">
                     <button>
-                    subscribe
+                        subscribe
                     </button>
                     </form>
                 </div>

@@ -44,3 +44,9 @@ function myMap() {
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
+
+function reply(caller){
+    $('.comment_reply').insertAfter($(caller));
+    $('.comment_reply').toggle();
+    document.getElementById('commentId').value=$(caller).attr('data-commentId');
+}
