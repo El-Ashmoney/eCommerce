@@ -71,9 +71,9 @@
                                 @endforelse
                             </table>
                         </div>
-                        {{-- <div style="margin: 30px 0" class="d-flex justify-content-center custom-paginate">
+                        <div style="margin: 30px 0" class="d-flex justify-content-center custom-paginate">
                             {!! $orders->appends(Request::all())->links() !!}
-                        </div> --}}
+                        </div>
                     </div>
                 </div>
             </div>

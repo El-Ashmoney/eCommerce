@@ -72,6 +72,17 @@
 
             </p>
         </div>
+        <!-- Custom jQery -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                var scrollpos = localStorage.getItem('scrollpos');
+                if (scrollpos) window.scrollTo(0, scrollpos);
+            });
+
+            window.onbeforeunload = function(e) {
+                localStorage.setItem('scrollpos', window.scrollY);
+            };
+        </script>
         <!-- jQery -->
         <script src="jhome/js/jquery-3.4.1.min.js"></script>
         <!-- popper js -->

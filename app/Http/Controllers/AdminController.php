@@ -89,7 +89,7 @@ class AdminController extends Controller
     }
 
     public function order(){
-        $orders = Order::all();
+        $orders = Order::paginate(5);
         return view('admin.order', compact('orders'));
     }
 
@@ -134,7 +134,7 @@ class AdminController extends Controller
 
     public function search_data(Request $request){
         $searchInput = $request->search;
-        $orders = Order::where('name', 'LIKE', "%$searchInput%")->get();
+        $orders = Order::where('name', 'LIKE', "%$searchInput%")->paginate(5);
         // $orders_paginate = Order::paginate(5);
         return view('admin.order', compact('orders'));
     }

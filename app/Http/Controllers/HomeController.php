@@ -118,10 +118,10 @@ class HomeController extends Controller
     public function stripePost(Request $request, $total_price){
         Stripe::setApiKey(env('STRIPE_SECRET'));
         Charge::create ([
-                "amount" => $total_price * 100,
-                "currency" => "usd",
-                "source" => $request->stripeToken,
-                "description" => "Thank's for payment"
+            "amount" => $total_price * 100,
+            "currency" => "usd",
+            "source" => $request->stripeToken,
+            "description" => "Thank's for payment"
         ]);
         $user = Auth::user();
         $userId = $user->id;
@@ -152,7 +152,7 @@ class HomeController extends Controller
     public function show_order(){
         $user = Auth::user();
         $userId = $user->id;
-        $orders = Order::where('user_id', '=', $userId)->get();
+        $orders = Order::where('user_id', '=', $userId)->paginate(5);
         return view('home.show_order', compact('orders'));
     }
 
@@ -192,5 +192,11 @@ class HomeController extends Controller
         $reply->user_id     = $user->id;
         $reply->save();
         return redirect()->back()->with('message', 'Your Reply Has Been Sent');
+    }
+
+    public function product_search(Request $request){
+        $search_text = $request->search;
+        $products = Product::where('title', 'LIKE', "%$search_text%")->orWhere('category', 'LIKE', "%$search_text%")->paginate(5);
+        return view('home.userpage', compact('products'));
     }
 }
