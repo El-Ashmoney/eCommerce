@@ -1118,10 +1118,10 @@ form input[type="submit"]:focus {
 }
 
 .cpy_ p a {
-  margin: 0;
-  color: #f7444e;
-  font-size: 15px;
-  font-weight: 400;
+    margin: 0;
+    color: #f7444e;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 /* Custom Style */
@@ -1146,8 +1146,18 @@ form input[type="submit"]:focus {
 .product_section .custom-paginate nav div:first-of-type{margin-bottom: 20px;}
 .product_section .custom-paginate a:hover{text-decoration: none;}
 .comment_section .box{background-image: linear-gradient(to bottom, #ecf0f1, #e5e8ea, #dfdfe3, #d9d6da, #d4ced0);}
-.comment_section .box .comments_form a{display: inline;}
-.comment_section .box .comments_form input{border-radius: 5px; background-color: red; color: #FFF; display: block; text-align: center;}
+.comment_section .box .comments_form a{display: inline; border-radius: 50px;}
+.comment_section .box .comments_form input{
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: red;
+    color: #FFF;
+    display: block;
+    text-align: center;
+    border-radius: 50px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s
+}
 .comment_section .box .comments_form input:hover{background-color: transparent; color: red; border: 1px solid red;}
 .hero_area .comment_page h1{font-size: 40px; text-align: center;}
 .hero_area .comment_page .comment_body{margin: 30px auto; display: block;}
@@ -1156,6 +1166,7 @@ form input[type="submit"]:focus {
 .hero_area .comment_page .comment_body .comment_auther{font-size: 25px; font-weight: bold;}
 .comment_page .comment_message{text-align: center;}
 .hero_area .comment_page .comment_body .replies{padding-left: 3%; padding-bottom: 10px; padding-top: 10px;}
+.page-item.active .page-link{background-color: #f7444e; border-color: #f7444e;}
 /* http://kute-themes.com/html/boutique/html/index.html
 https://template.hasthemes.com/noraure/noraure/index.html
 https://preview.hasthemes.com/xoss-preview/xoss/index.html */

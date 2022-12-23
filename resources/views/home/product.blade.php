@@ -64,10 +64,10 @@
                     </div>
                 </div>
             @endforeach
-            <div>
-                <span style="padding: 10px 0" class="custom-paginate">
-                    {!! $products->appends(Request::all())->links() !!}
-                </span>
+        </div>
+        <div class="container" style="margin-top: 50px">
+            <div class="row">
+                {{ $products->appends(Request::all())->links() }}
             </div>
         </div>
     </div>
