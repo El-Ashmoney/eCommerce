@@ -12,7 +12,7 @@
             <div class="col-sm-6 col-md-4 col-lg-4" style="margin: auto; width= 50%; padding: 30px">
                 <div class="box">
                     <div class="img-box">
-                        <img src="product/{{ $product->image }}" alt="">
+                        <img src="/product/{{ $product->image }}" alt="">
                     </div>
                     <div class="detail-box">
                         <h5 style="margin: 20px 0; text-align: center">

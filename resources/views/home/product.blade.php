@@ -12,6 +12,12 @@
                 </form>
             </div>
         </div>
+        @if (session()->has('message'))
+            <div class="alert alert-success" style="text-align: center" role="alert">
+                <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
+                {{ session()->get('message') }}
+            </div>
+        @endif
         <div class="row">
             @foreach ($products as $product)
                 <div class="col-sm-6 col-md-4 col-lg-4">
@@ -35,7 +41,7 @@
                             </div>
                         </div>
                         <div class="img-box">
-                            <img src="product/{{ $product->image }}" alt="">
+                            <img src="/product/{{ $product->image }}" alt="">
                         </div>
                         <div class="detail-box">
                             <h5>

@@ -7,14 +7,19 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Notifications\EmailNotification;
 use Illuminate\Support\Facades\Notification;
 
 class AdminController extends Controller
 {
     public function view_category(){
-        $categories = Category::all();
-        return view('admin.category', compact('categories'));
+        if(Auth::user()){
+            $categories = Category::all();
+            return view('admin.category', compact('categories'));
+        }else{
+            return redirect('login');
+        }
     }
 
     public function add_category(Request $request){
@@ -31,9 +36,13 @@ class AdminController extends Controller
     }
 
     public function view_product(){
-        $categories = Category::all();
-        $products = Product::all();
-        return view('admin.product', compact('products', 'categories'));
+        if(Auth::user()){
+            $categories = Category::all();
+            $products = Product::all();
+            return view('admin.product', compact('products', 'categories'));
+        }else{
+            return redirect('login');
+        }
     }
 
     public function add_product(Request $request){
@@ -53,8 +62,12 @@ class AdminController extends Controller
     }
 
     public function show_product(){
-        $products = Product::all();
-        return view('admin.show_product', compact('products'));
+        if(Auth::user()){
+            $products = Product::all();
+            return view('admin.show_product', compact('products'));
+        }else{
+            return redirect('login');
+        }
     }
 
     public function update_product($id){
@@ -89,8 +102,12 @@ class AdminController extends Controller
     }
 
     public function order(){
-        $orders = Order::paginate(5);
-        return view('admin.order', compact('orders'));
+        if(Auth::user()){
+            $orders = Order::paginate(5);
+            return view('admin.order', compact('orders'));
+        }else{
+            return redirect('login');
+        }
     }
 
     public function delete_order($id){
@@ -135,7 +152,6 @@ class AdminController extends Controller
     public function search_data(Request $request){
         $searchInput = $request->search;
         $orders = Order::where('name', 'LIKE', "%$searchInput%")->paginate(5);
-        // $orders_paginate = Order::paginate(5);
         return view('admin.order', compact('orders'));
     }
 }
