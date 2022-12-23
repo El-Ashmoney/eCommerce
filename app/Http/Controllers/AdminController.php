@@ -154,4 +154,9 @@ class AdminController extends Controller
         $orders = Order::where('name', 'LIKE', "%$searchInput%")->paginate(5);
         return view('admin.order', compact('orders'));
     }
+
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect('/login');
+    }
 }

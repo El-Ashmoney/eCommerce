@@ -21166,3 +21166,7 @@ div.tagsinput {
 .send-email .email-greeting:first-of-type{margin-top: 80px;}
 .send-email .email-greeting{margin-top: 20px; padding-left: 35%;}
 .send-email .email-greeting label{display: inline-block; width: 300px;}
+.navbar-nav-right .dropdown .dropdown-menu .dropdown-item .preview-item-content .settings{text-decoration: none; color: #FFF}
+.navbar-nav-right .dropdown .dropdown-menu .dropdown-item .preview-item-content .settings:hover{text-decoration: none; color: #00d25b}
+.navbar-nav-right .dropdown .dropdown-menu .dropdown-item .preview-item-content .logout{text-decoration: none; color: #FFF}
+.navbar-nav-right .dropdown .dropdown-menu .dropdown-item .preview-item-content .logout:hover{text-decoration: none; color: #fc424a}
