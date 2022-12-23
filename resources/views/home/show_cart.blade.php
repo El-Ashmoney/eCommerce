@@ -4,6 +4,7 @@
         @include('home.css')
     </head>
     <body>
+        @include('sweetalert::alert')
         <div class="hero_area">
             <!-- header section strats -->
             @include('home.header')
@@ -31,7 +32,7 @@
                             <td>${{ $cart->product_price }}</td>
                             <td><img class="product-img" src="product/{{ $cart->product_image }}" alt=""></td>
                             <td>
-                                <a href="{{ url('remove_cart', $cart->id) }}" class="btn btn-danger" onclick="return confirm('Are You Sure To Remove This Product?')">Remove</a>
+                                <a href="{{ url('remove_cart', $cart->id) }}" class="btn btn-danger" onclick="confirmation(event)">Remove</a>
                             </td>
                         </tr>
                         <?php $total_price = $total_price + $cart->product_price ?>

@@ -12,9 +12,10 @@ use App\Models\Comment;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
-
 use function PHPUnit\Framework\isEmpty;
+
+use Illuminate\Support\Facades\Session;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
 {
@@ -77,7 +78,8 @@ class HomeController extends Controller
                 $cart->product_id       = $product->id;
                 $cart->user_id          = $user->id;
                 $cart->save();
-                return redirect()->back()->with('message', 'Thank you for purchasing the product');
+                Alert::success('Thank you for purchasing the product','Product Added Successfully');
+                return redirect()->back();
             }
         }else{
             return redirect('login');
@@ -88,12 +90,13 @@ class HomeController extends Controller
     public function show_cart(){
         $id = Auth::user()->id;
         $cart = Cart::where('user_id', '=', $id)->get();
-        return view('home.show_cart', compact('cart'));
+        return view('home.show_cart', compact('cart', 'carts_count'));
     }
 
     public function remove_cart($id){
         $cart = Cart::find($id);
         $cart->delete();
+        Alert::success('Order has been removed');
         return redirect()->back();
     }
 
@@ -120,10 +123,12 @@ class HomeController extends Controller
             $cart = Cart::find($cart_id);
             $cart->delete();
         }
-        return redirect()->back()->with('message', 'We received your order, We will be contact with you soon.');
+        Alert::success('We received your order','We will be contact with you soon');
+        return redirect()->back();
     }
 
     public function stripe($total_price){
+        Alert::success('We received your order','We will be contact with you soon');
         return view('home.stripe', compact('total_price'));
     }
 
@@ -192,7 +197,8 @@ class HomeController extends Controller
         $comment->user_id   = $user->id;
         $comment->comment   = $request->comment;
         $comment->save();
-        return redirect()->back()->with('message', 'Your Comment Has Been Sent');
+        Alert::success('Your Comment Has Been Sent');
+        return redirect()->back();
     }
 
     public function add_reply(Request $request){
@@ -203,7 +209,8 @@ class HomeController extends Controller
         $reply->comment_id  = $request->commentId;
         $reply->user_id     = $user->id;
         $reply->save();
-        return redirect()->back()->with('message', 'Your Reply Has Been Sent');
+        Alert::success('Your Reply Has Been Sent');
+        return redirect()->back();
     }
 
     public function product_search(Request $request){

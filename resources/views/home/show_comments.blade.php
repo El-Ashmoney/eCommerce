@@ -4,6 +4,7 @@
         @include('home.css')
     </head>
     <body>
+        @include('sweetalert::alert')
         <div class="hero_area">
             <!-- header section strats -->
             @include('home.header')
@@ -11,12 +12,6 @@
             <div class="comment_page">
                 <div class="container">
                     <h1>Comments</h1>
-                    @if (session()->has('message'))
-                        <div class="alert alert-success comment_message container">
-                            <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
-                            {{ session()->get('message') }}
-                        </div>
-                    @endif
                     <div class="comment_body row">
                         @foreach ($comments as $comment)
                             <div>
