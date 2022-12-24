@@ -46,7 +46,7 @@
                                 @forelse ($orders as $order)
                                     <tr>
                                         <td>{{ $order->name }}</td>
-                                        <td>{{ $order->email }}</td>
+                                        <td class="table-email">{{ $order->email }}</td>
                                         <td>{{ $order->phone }}</td>
                                         <td>{{ $order->address }}</td>
                                         <td>{{ $order->product_title }}</td>
@@ -71,8 +71,10 @@
                                 @endforelse
                             </table>
                         </div>
-                        <div style="margin: 30px 0" class="d-flex justify-content-center custom-paginate">
-                            {!! $orders->appends(Request::all())->links() !!}
+                        <div class="container custom_pagination">
+                            <div style="margin: 30px 0" class="">
+                                {!! $orders->appends(Request::all())->links() !!}
+                            </div>
                         </div>
                     </div>
                 </div>

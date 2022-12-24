@@ -65,7 +65,7 @@
                 </div>
             @endforeach
         </div>
-        <div class="container" style="margin-top: 50px">
+        <div class="custom_pagination container" style="margin-top: 50px">
             <div class="row">
                 {{ $products->appends(Request::all())->links() }}
             </div>

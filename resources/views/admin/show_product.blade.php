@@ -42,6 +42,11 @@
                             @endforeach
                         </table>
                     </div>
+                    <div class="container custom_pagination">
+                        <div style="margin-top: 30px" class="">
+                            {!! $products->appends(Request::all())->links() !!}
+                        </div>
+                    </div>
                 </div>
             </div>
         <!-- container-scroller -->

@@ -15,34 +15,36 @@
                         {{ session()->get('message') }}
                     </div>
                 @endif
-                <table>
-                    <tr>
-                        <th class="th_deg">Product Title</th>
-                        <th class="th_deg">Product Quantity</th>
-                        <th class="th_deg">Product Price</th>
-                        <th class="th_deg">Payment Status</th>
-                        <th class="th_deg">Delivery Status</th>
-                        <th class="th_deg">Image</th>
-                        <th class="th_deg">Control</th>
-                    </tr>
-                    <tr>
-                        @foreach ($orders as $order)
-                            <td>{{ $order->product_title }}</td>
-                            <td>{{ $order->product_quantity }}</td>
-                            <td>{{ $order->product_price }}</td>
-                            <td>{{ $order->payment_status }}</td>
-                            <td>{{ $order->delivery_status }}</td>
-                            <td><img class="product-img" src="product/{{ $order->product_image }}" alt=""></td>
-                            <td>
-                                @if ($order->delivery_status == 'processing')
-                                    <a href="{{ url('cancel_order', $order->id) }}" class="btn btn-danger" onclick="return confirm('Are You Sure To Cancel This Order?')">Cancel Order</a>
-                                @else
-                                    <button type="button" class="btn btn-warning disabled" style="color: red" disabled aria-disabled="true">Canceled</button>
-                                @endif
-                            </td>
-                        @endforeach
-                    </tr>
-                </table>
+                <div class="container">
+                    <table class="show_order">
+                        <tr>
+                            <th class="th_deg">Product Title</th>
+                            <th class="th_deg">Product Quantity</th>
+                            <th class="th_deg">Product Price</th>
+                            <th class="th_deg">Payment Status</th>
+                            <th class="th_deg">Delivery Status</th>
+                            <th class="th_deg">Image</th>
+                            <th class="th_deg">Control</th>
+                        </tr>
+                        <tr>
+                            @foreach ($orders as $order)
+                                <td>{{ $order->product_title }}</td>
+                                <td>{{ $order->product_quantity }}</td>
+                                <td>{{ $order->product_price }}</td>
+                                <td>{{ $order->payment_status }}</td>
+                                <td>{{ $order->delivery_status }}</td>
+                                <td><img class="product-img" src="product/{{ $order->product_image }}" alt=""></td>
+                                <td>
+                                    @if ($order->delivery_status == 'processing')
+                                        <a href="{{ url('cancel_order', $order->id) }}" class="btn btn-danger" onclick="return confirm('Are You Sure To Cancel This Order?')">Cancel Order</a>
+                                    @else
+                                        <button type="button" class="btn btn-warning disabled" style="color: red" disabled aria-disabled="true">Canceled</button>
+                                    @endif
+                                </td>
+                            @endforeach
+                        </tr>
+                    </table>
+                </div>
             </div>
         <!-- footer start -->
         @include('home.footer')

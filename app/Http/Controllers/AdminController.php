@@ -63,7 +63,7 @@ class AdminController extends Controller
 
     public function show_product(){
         if(Auth::user()){
-            $products = Product::all();
+            $products = Product::paginate(5);
             return view('admin.show_product', compact('products'));
         }else{
             return redirect('login');
