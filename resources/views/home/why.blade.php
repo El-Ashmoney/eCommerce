@@ -100,7 +100,7 @@
                     Fast Delivery
                     </h5>
                     <p>
-                    variations of passages of Lorem Ipsum available
+                        Available for customers shipping to select Metro areas (Cairo and Giza) and products sold and Fulfilled by Blank Cart.
                     </p>
                 </div>
             </div>
@@ -215,7 +215,7 @@
                     Free Shiping
                     </h5>
                     <p>
-                    variations of passages of Lorem Ipsum available
+                        With FREE Shipping, your order will be delivered 1-2 business days after all of your items are available to be shipped.
                     </p>
                 </div>
             </div>
@@ -236,7 +236,7 @@
                     Best Quality
                     </h5>
                     <p>
-                    variations of passages of Lorem Ipsum available
+                        Best Quality Corporate executives and consumers have in recent years adopted divergent views of product quality.
                     </p>
                 </div>
             </div>

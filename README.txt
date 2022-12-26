@@ -6,5 +6,3 @@ Setup
 5- Register in the website
 Sample Admin email ( admin@admin.com )
 Sample Admin password ( ++++++++ )
-Sample user email ( user@user.com )
-Sample user password ( 00000000 )

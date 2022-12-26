@@ -17,12 +17,10 @@
                             On Everything
                         </h1>
                         <p>
-                            Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                            This week's sale is 20% off everything in the store. Check it out today!
                         </p>
                         <div class="btn-box">
-                            <a href="" class="btn1">
-                            Shop Now
-                            </a>
+                            <a href="{{ url('products') }}" class="btn1">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -35,19 +33,15 @@
                 <div class="col-md-7 col-lg-6 ">
                     <div class="detail-box">
                         <h1>
-                            <span>
-                            Sale 20% Off
-                            </span>
+                            <span>Gift cards</span>
                             <br>
-                            On Everything
+                            You Have been GIFTED
                         </h1>
                         <p>
-                            Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                            $60 Gift card, Gift cards are the best incentive here as customers are free to choose their preferred gift and they are going to spend the credits in your ecommerce store – a win-win.
                         </p>
                         <div class="btn-box">
-                            <a href="" class="btn1">
-                            Shop Now
-                            </a>
+                            <a href="{{ url('products') }}" class="btn1">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -60,19 +54,15 @@
                 <div class="col-md-7 col-lg-6 ">
                     <div class="detail-box">
                         <h1>
-                            <span>
-                            Sale 20% Off
-                            </span>
+                            <span>Giveaways & contests</span>
                             <br>
                             On Everything
                         </h1>
                         <p>
-                            Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                            A giveaway is a blanket term for sweepstakes, contests, and lotteries, as all three of these categories give participants a chance to win prizes.
                         </p>
                         <div class="btn-box">
-                            <a href="" class="btn1">
-                            Shop Now
-                            </a>
+                            <a href="{{ url('products') }}" class="btn1">Shop Now</a>
                         </div>
                     </div>
                 </div>

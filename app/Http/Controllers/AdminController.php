@@ -54,7 +54,7 @@ class AdminController extends Controller
         $product->discount_price   = $request->discount_price;
         $product->category         = $request->product_category;
         $image = $request->image;
-        $imageName = date('Y-m-d').'.'.$image->getClientOriginalExtension();
+        $imageName = time().'.'.$image->getClientOriginalExtension();
         $request->image->move('product', $imageName);
         $product->image = $imageName;
         $product->save();
@@ -63,7 +63,7 @@ class AdminController extends Controller
 
     public function show_product(){
         if(Auth::user()){
-            $products = Product::paginate(5);
+            $products = Product::orderBy('id', 'DESC')->paginate(5);
             return view('admin.show_product', compact('products'));
         }else{
             return redirect('login');
@@ -87,7 +87,7 @@ class AdminController extends Controller
         $product->title             = $request->title;
         $image = $request->image;
         if($image){
-            $imageName = date('Y-m-d').'.'.$image->getClientOriginalExtension();
+            $imageName = time().'.'.$image->getClientOriginalExtension();
             $request->image->move('product', $imageName);
             $product->image = $imageName;
         }
@@ -103,7 +103,7 @@ class AdminController extends Controller
 
     public function order(){
         if(Auth::user()){
-            $orders = Order::paginate(5);
+            $orders = Order::orderBy('id', 'DESC')->paginate(5);
             return view('admin.order', compact('orders'));
         }else{
             return redirect('login');
@@ -127,7 +127,8 @@ class AdminController extends Controller
     public function download_pdf($id){
         $order = Order::find($id);
         $pdf = PDF::loadView('admin.pdf', compact('order'));
-        return $pdf->download('order_details.pdf');
+        return view('admin.pdf', compact('order'));
+        // return $pdf->download('order_details.pdf');
     }
 
     public function send_email($id){

@@ -4,6 +4,7 @@
         @include('home.css')
     </head>
     <body>
+        @include('sweetalert::alert')
         <div class="hero_area">
             <!-- header section strats -->
             @include('home.header')
@@ -26,11 +27,11 @@
                             <th class="th_deg">Image</th>
                             <th class="th_deg">Control</th>
                         </tr>
-                        <tr>
-                            @foreach ($orders as $order)
+                        @foreach ($orders as $order)
+                            <tr>
                                 <td>{{ $order->product_title }}</td>
                                 <td>{{ $order->product_quantity }}</td>
-                                <td>{{ $order->product_price }}</td>
+                                <td>${{ $order->product_price }}</td>
                                 <td>{{ $order->payment_status }}</td>
                                 <td>{{ $order->delivery_status }}</td>
                                 <td><img class="product-img" src="product/{{ $order->product_image }}" alt=""></td>
@@ -41,9 +42,14 @@
                                         <button type="button" class="btn btn-warning disabled" style="color: red" disabled aria-disabled="true">Canceled</button>
                                     @endif
                                 </td>
-                            @endforeach
-                        </tr>
+                            </tr>
+                        @endforeach
                     </table>
+                </div>
+                <div class="custom_pagination container" style="margin-top: 50px">
+                    <div class="row">
+                        {{ $orders->appends(Request::all())->links() }}
+                    </div>
                 </div>
             </div>
         <!-- footer start -->

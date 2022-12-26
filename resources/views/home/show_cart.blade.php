@@ -16,7 +16,7 @@
                         {{ session()->get('message') }}
                     </div>
                 @endif
-                <table>
+                <table class="show_order">
                     <tr>
                         <th class="th_deg">Product Title</th>
                         <th class="th_deg">Product Quantity</th>
@@ -41,11 +41,13 @@
                 <div>
                     <h1>Total Price = ${{ $total_price }}</h1>
                 </div>
-                <div class="payment-method">
-                    <h1>Proceed to pay</h1>
-                    <a href="{{ url('cash_order') }}" class="btn btn-danger">Cash On Delivery</a>
-                    <a href="{{ url('stripe', $total_price) }}" class="btn btn-danger">Pay Using Card</a>
-                </div>
+                @if ($total_price !== 0)
+                    <div class="payment-method">
+                        <h1>Proceed to pay</h1>
+                        <a href="{{ url('cash_order') }}" class="btn btn-danger">Cash On Delivery</a>
+                        <a href="{{ url('stripe', $total_price) }}" class="btn btn-danger">Pay Using Card</a>
+                    </div>
+                @endif
             </div>
         <!-- footer start -->
         @include('home.footer')

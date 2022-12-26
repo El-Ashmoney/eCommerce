@@ -17,6 +17,6 @@
         Customer Payment Status: <h1>{{ $order->payment_status }}</h1>
         Customer Delivery Status: <h1>{{ $order->delivery_status }}</h1>
         Product Image: <br>
-        <img src="/product/{{ $order->product_image }}" style="width: 450px; height: 250px" alt="">
+        <img src="./product/{{ $order->product_image }}" style="width: 450px; height: 250px" alt="">
     </body>
 </html>

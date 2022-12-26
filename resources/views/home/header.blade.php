@@ -6,7 +6,7 @@
                 <span class=""> </span>
             </button>
             <div class="navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav" id="headerLinks">
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
                     </li>
@@ -14,7 +14,7 @@
                         <a class="nav-link" href="{{ url('products') }}">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="{{ url('contact') }}">Contact</a>
                     </li>
                     @auth
                     <li class="nav-item">
@@ -23,12 +23,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('show_order') }}">Order</a>
                     </li>
+                    @if(Auth::user()->usertype == 1)
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('redirect') }}" target="_blank">Admin Dashboard</a>
+                        </li>
+                    @endif
                     @endauth
-                    <form class="form-inline">
-                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                    </form>
                     @if (Route::has('login'))
                         @auth
                             <li class="nav-item">
@@ -37,10 +37,10 @@
                                 </x-app-layout>
                             </li>
                         @else
-                            <li class="nav-item">
+                            <li class="nav-item" style="padding-top: 13px">
                                 <a class="btn btn-primary" href="{{ route('login') }}" id="loginCss">Login</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" style="padding-top: 13px">
                                 <a class="btn btn-success" href="{{ route('register') }}">Register</a>
                             </li>
                         @endauth

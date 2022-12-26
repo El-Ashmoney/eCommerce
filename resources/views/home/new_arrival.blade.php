@@ -12,9 +12,9 @@
                         </h2>
                     </div>
                     <p style="margin-top: 20px;margin-bottom: 30px;">
-                        Vitae fugiat laboriosam officia perferendis provident aliquid voluptatibus dolorem, fugit ullam sit earum id eaque nisi hic? Tenetur commodi, nisi rem vel, ea eaque ab ipsa, autem similique ex unde!
+                        Shop exclusive and luxury <span style="font-weight: bold">Blank Cart</span> New Arrivals for Women online in Cairo and whole Egypt. Shop 2022 New Arrivals collection at the best specs and prices
                     </p>
-                    <a href="">Shop Now</a>
+                    <a href="{{ url('products') }}">Shop Now</a>
                 </div>
             </div>
             <a href="">Shop Now</a>

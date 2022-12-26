@@ -160,14 +160,14 @@ class HomeController extends Controller
             $cart = Cart::find($cart_id);
             $cart->delete();
         }
-        Session::flash('success', 'Payment successful!');
-        return back();
+        Alert::success('We received your order','We will be contact with you soon');
+        return redirect()->back();
     }
 
     public function show_order(){
         $user = Auth::user();
         $userId = $user->id;
-        $orders = Order::where('user_id', '=', $userId)->paginate(5);
+        $orders = Order::where('user_id', '=', $userId)->orderBy('id', 'DESC')->paginate(5);
         return view('home.show_order', compact('orders'));
     }
 
@@ -218,7 +218,11 @@ class HomeController extends Controller
     }
 
     public function products(){
-        $products = Product::paginate(6);
+        $products = Product::orderBy('id', 'DESC')->paginate(6);
         return view('home.all_products', compact('products'));
+    }
+
+    public function contact(){
+        return view('home.contact');
     }
 }
