@@ -5,6 +5,7 @@
         @include('admin.css')
     </head>
     <body>
+        @include('sweetalert::alert')
         <div class="container-scroller">
             <!-- partial:partials/_sidebar.html -->
             @include('admin.sidebar')
@@ -21,7 +22,7 @@
                             </div>
                         @endif
                         <h2>Add Product</h2>
-                        <form action="{{ url('/add_product') }}" method="POST" enctype="multipart/form-data">
+                        <form style="margin-top: 60px" action="{{ url('/add_product') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div>
                                 <label for="title">Product Title</label>

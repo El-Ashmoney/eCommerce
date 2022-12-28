@@ -5,6 +5,7 @@
         @include('admin.css')
     </head>
     <body>
+        @include('sweetalert::alert')
         <div class="container-scroller">
             <!-- partial:partials/_sidebar.html -->
             @include('admin.sidebar')
@@ -12,7 +13,7 @@
             @include('admin.header')
             <!-- partial -->
             <div class="main-panel">
-                <div class="content-wrapper">
+                <div class="category_page content-wrapper">
                     @if (session()->has('message'))
                         <div class="alert alert-success">
                             <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
@@ -29,15 +30,17 @@
                     </div>
                     <table class="category_table">
                         <tr>
-                            <td>ID</td>
-                            <td>Category Name</td>
-                            <td>Action</td>
+                            <th>ID</th>
+                            <th>Category Name</th>
+                            <th>Action</th>
                         </tr>
                         @foreach ($categories as $category)
                             <tr>
                                 <td>{{ $category->id }}</td>
                                 <td>{{ $category->category_name }}</td>
-                                <td><a href="{{ url('delete_category', $category->id) }}" class="btn btn-danger" onclick="return confirm('Are you sure to delete the category')">Delete</a></td>
+                                <td>
+                                    <a href="{{ url('delete_category', $category->id) }}" class="btn btn-danger" onclick="return confirm('Are you sure to delete the category')">Delete</a>
+                                </td>
                             </tr>
                         @endforeach
                     </table>

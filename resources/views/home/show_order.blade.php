@@ -37,7 +37,7 @@
                                 <td><img class="product-img" src="product/{{ $order->product_image }}" alt=""></td>
                                 <td>
                                     @if ($order->delivery_status == 'processing')
-                                        <a href="{{ url('cancel_order', $order->id) }}" class="btn btn-danger" onclick="return confirm('Are You Sure To Cancel This Order?')">Cancel Order</a>
+                                        <a href="{{ url('cancel_order', $order->id) }}" class="btn btn-danger" onclick="return confirm('Are you sure to cancel this order?')">Cancel Order</a>
                                     @else
                                         <button type="button" class="btn btn-warning disabled" style="color: red" disabled aria-disabled="true">Canceled</button>
                                     @endif
@@ -55,11 +55,6 @@
         <!-- footer start -->
         @include('home.footer')
         <!-- footer end -->
-        <div class="cpy_">
-            <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
-                Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-            </p>
-        </div>
         <!-- jQery -->
         <script src="jhome/js/jquery-3.4.1.min.js"></script>
         <!-- popper js -->

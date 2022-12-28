@@ -4,7 +4,8 @@
         <!-- Required meta tags -->
         @include('admin.css')
     </head>
-    <body>
+    <body class="order-page">
+        @include('sweetalert::alert')
         <div class="container-scroller">
             <!-- partial:partials/_sidebar.html -->
             @include('admin.sidebar')

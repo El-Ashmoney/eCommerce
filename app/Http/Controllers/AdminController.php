@@ -9,6 +9,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Notifications\EmailNotification;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Notification;
 
 class AdminController extends Controller
@@ -26,13 +27,15 @@ class AdminController extends Controller
         $data = new Category();
         $data->category_name = $request->category_name;
         $data->save();
-        return redirect()->back()->with('message', 'Catagory Added Successfully');
+        Alert::success('Catagory added successfully','Please feel free to continue');
+        return redirect()->back();
     }
 
     public function delete_category($id){
         $data = Category::find($id);
         $data->delete();
-        return redirect()->back()->with('message', 'Category deleted Successfully');
+        Alert::success('Category deleted successfully','Please feel free to continue');
+        return redirect()->back();
     }
 
     public function view_product(){
@@ -58,7 +61,8 @@ class AdminController extends Controller
         $request->image->move('product', $imageName);
         $product->image = $imageName;
         $product->save();
-        return redirect()->back()->with('message', 'Product Added Successfully');
+        Alert::success('Product added successfully','Please feel free to continue');
+        return redirect()->back();
     }
 
     public function show_product(){
@@ -92,13 +96,15 @@ class AdminController extends Controller
             $product->image = $imageName;
         }
         $product->save();
-        return redirect()->back()->with('message', 'Product updated Successfully');
+        Alert::success('Product updated successfully','Please feel free to continue');
+        return redirect()->back();
     }
 
     public function delete_product($id){
         $product = Product::find($id);
         $product->delete();
-        return redirect()->back()->with('message', 'Product deleted Successfully');
+        Alert::success('Product deleted successfully','Please feel free to continue');
+        return redirect()->back();
     }
 
     public function order(){
@@ -113,7 +119,8 @@ class AdminController extends Controller
     public function delete_order($id){
         $order = Order::find($id);
         $order->delete();
-        return redirect()->back()->with('message', 'Order deleted Successfully');
+        Alert::success('Order deleted successfully','Please feel free to continue');
+        return redirect()->back();
     }
 
     public function deliver_order($id){
@@ -121,14 +128,15 @@ class AdminController extends Controller
         $order->delivery_status = "delivered";
         $order->payment_status = "paid";
         $order->save();
-        return redirect()->back()->with('message', 'Order Status Changed To Delivered');
+        Alert::success('Order status changed to delivered','Please feel free to continue');
+        return redirect()->back();
     }
 
     public function download_pdf($id){
         $order = Order::find($id);
         $pdf = PDF::loadView('admin.pdf', compact('order'));
+        Alert::success('Download will start soon','Please check your download folder');
         return view('admin.pdf', compact('order'));
-        // return $pdf->download('order_details.pdf');
     }
 
     public function send_email($id){
@@ -147,6 +155,7 @@ class AdminController extends Controller
             'lastLine'      => $request->lastLine,
         ];
         Notification::send($order, new EmailNotification($details));
+        Alert::success('Your mail has been sent','Please check your inbox');
         return redirect()->back();
     }
 

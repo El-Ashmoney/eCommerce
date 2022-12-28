@@ -12,14 +12,14 @@
   @include flex-direction(column);
   @include border-radius(10px);
 
-  .swal2-title {
+.swal2-title {
     font-size: 25px;
     line-height: 1;
     font-weight: $font-weight-medium;
     color: $body-color;
     font-weight: initial;
     margin-bottom: 0;
-  }
+}
 
   .swal2-icon,
   .swal2-success-ring {
