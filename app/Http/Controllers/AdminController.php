@@ -160,4 +160,11 @@ class AdminController extends Controller
         Auth::logout();
         return redirect('/login');
     }
+
+    public function search_product(Request $request){
+        $search_text = $request->search;
+        $products = Product::where('title', 'LIKE', "%$search_text%")->orWhere('category', 'LIKE', "%$search_text%")->paginate(5);
+        return view('admin.show_product', compact('products'));
+    }
+
 }

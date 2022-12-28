@@ -21141,15 +21141,15 @@ div.tagsinput {
 /*# sourceMappingURL=maps/style.css.map */
 
 /* ADMIN Style */
-.add_category, .add_product, .product{text-align: center; padding-top: 15px;}
+.add_category, .add_product, .product{text-align: center; padding-top: 3px;}
 .add_category > h2, .add_product h2, .product h2{font-size: 40px; padding-bottom: 15px;}
 .add_category input, .add_product input, .add_product select{color: #000;}
 .main-panel .content-wrapper .category_table{margin: auto; margin-top: 30px; width: 50%; text-align: center; border: 2px solid #911A6B;}
 .add_product label{display: inline-block; width: 200px;}
 .add_product div{padding-bottom: 15px;}
-.product .greadient_border{padding: 3px 2px; background-image: linear-gradient(to left, #d41459, #911a6c)}
-.product table{margin: 30px auto; width: 100%; text-align: center; background-color: #000;}
-.content-wrapper .product table .product-img, .order-img{width: 100px; height: 100px;}
+.product .greadient_border{padding: 1px 2px; background-image: linear-gradient(to left, #d41459, #911a6c)}
+.product table{margin: 0px 0 30px 0px; width: 100%; text-align: center; background-color: #000;}
+.content-wrapper .product table .product-img, .order-img{width: 100px; height: 100px; margin: auto; object-fit: contain;}
 .product table tr:first-of-type{background-image: linear-gradient(to left, #d41459, #911a6c);}
 .product table tr:first-of-type th{padding: 25px 0 25px 0;}
 .product table tr td{border-bottom: 1px solid #242424; padding: 0 5px}
@@ -21166,7 +21166,9 @@ div.tagsinput {
 .send-email .email-greeting:first-of-type{margin-top: 80px;}
 .send-email .email-greeting{margin-top: 20px; padding-left: 35%;}
 .send-email .email-greeting label{display: inline-block; width: 300px;}
-.navbar-nav-right .dropdown .dropdown-menu .dropdown-item .preview-item-content .settings{text-decoration: none; color: #FFF}
-.navbar-nav-right .dropdown .dropdown-menu .dropdown-item .preview-item-content .settings:hover{text-decoration: none; color: #00d25b}
+.navbar-nav-right .dropdown .dropdown-menu .dropdown-item .preview-item-content .settings,
 .navbar-nav-right .dropdown .dropdown-menu .dropdown-item .preview-item-content .logout{text-decoration: none; color: #FFF}
+.navbar-nav-right .dropdown .dropdown-menu .dropdown-item .preview-item-content .settings:hover{text-decoration: none; color: #00d25b}
 .navbar-nav-right .dropdown .dropdown-menu .dropdown-item .preview-item-content .logout:hover{text-decoration: none; color: #fc424a}
+.sidebar .sidebar-brand-wrapper .sidebar-brand img{width: 200px; height: auto; max-width: none;}
+.sidebar .sidebar-brand-wrapper .sidebar-brand.brand-logo-mini img{height: auto; width: 25px; max-width: none;}

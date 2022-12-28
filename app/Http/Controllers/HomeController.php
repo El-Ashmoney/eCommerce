@@ -27,7 +27,7 @@ class HomeController extends Controller
         if ($userType == '1'){
             $products       = Product::all()->count();
             $orders         = Order::all()->count();
-            $users          = User::all()->count();
+            $users          = User::where('usertype' , '!=', 1)->get()->count();
             $order          = Order::all();
             $total_revenues = 0;
             foreach($order as $order_revenue){
@@ -37,7 +37,7 @@ class HomeController extends Controller
             $ongoing_orders     = Order::where('delivery_status', '=', 'processing')->get()->count();
             return view('admin.home', compact('products', 'orders', 'users', 'total_revenues', 'delivered_orders', 'ongoing_orders'));
         }else{
-            $products = Product::paginate(6);
+            $products = Product::orderBy('id', 'DESC')->paginate(6);
             return view('home.userpage', compact('products'));
         }
     }

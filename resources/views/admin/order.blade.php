@@ -72,7 +72,7 @@
                             </table>
                         </div>
                         <div class="container custom_pagination">
-                            <div style="margin: 30px 0" class="">
+                            <div style="margin: 30px 0 0 0" class="">
                                 {!! $orders->appends(Request::all())->links() !!}
                             </div>
                         </div>

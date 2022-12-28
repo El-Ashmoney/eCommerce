@@ -558,6 +558,7 @@ a:focus {
     padding: 45px 50px;
     border-radius: 5px;
     color: #ffffff;
+    max-height: 300px;
 }
 
 .detail-box h5 {
