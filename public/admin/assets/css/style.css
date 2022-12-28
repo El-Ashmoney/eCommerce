@@ -21154,7 +21154,7 @@ div.tagsinput {
 .product table tr:first-of-type th{padding: 25px 0 25px 0;}
 .product table tr td{border-bottom: 1px solid #242424; padding: 0 5px}
 .product table .table-email{max-width: 220px; overflow-wrap: break-word;}
-.order-panel .product table .no-data td{padding: 30px 0; color: red; font-size: 30px; font-weight: bold;}
+.order-panel .product table .no-data td, .show_product .product table .no-data td{padding: 30px 0; color: red; font-size: 30px; font-weight: bold;}
 .order-panel h1{text-align: center;}
 .custom_pagination{display: flex; justify-content: center; justify-items: center;}
 .custom_pagination .active .page-link{background-color: #f7444e; border-color: #f7444e; color: #FFF;}
@@ -21171,4 +21171,4 @@ div.tagsinput {
 .navbar-nav-right .dropdown .dropdown-menu .dropdown-item .preview-item-content .settings:hover{text-decoration: none; color: #00d25b}
 .navbar-nav-right .dropdown .dropdown-menu .dropdown-item .preview-item-content .logout:hover{text-decoration: none; color: #fc424a}
 .sidebar .sidebar-brand-wrapper .sidebar-brand img{width: 200px; height: auto; max-width: none;}
-.sidebar .sidebar-brand-wrapper .sidebar-brand.brand-logo-mini img{height: auto; width: 25px; max-width: none;}
+.sidebar .sidebar-brand-wrapper .sidebar-brand.brand-logo-mini img{height: auto; width: 35px; max-width: none;}

@@ -11,7 +11,7 @@
             <!-- partial -->
             @include('admin.header')
             <!-- partial -->
-            <div class="main-panel">
+            <div class="show_product main-panel">
                 <div class="content-wrapper">
                     <div class="product">
                         <h2>Products</h2>
@@ -27,7 +27,7 @@
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
-                            @foreach ($products as $product)
+                            @forelse ($products as $product)
                                 <tr>
                                     <td>{{ $product->title }}</td>
                                     <td>{{ $product->description }}</td>
@@ -39,7 +39,11 @@
                                     <td><a href="{{ url('/update_product', $product->id) }}" class="btn btn-success">Edit</a></td>
                                     <td><a href="{{ url('delete_product', $product->id) }}" class="btn btn-danger" onclick="return confirm('Are you sure to delete the product')">Delete</a></td>
                                 </tr>
-                            @endforeach
+                                @empty
+                                    <tr class="no-data">
+                                        <td colspan="16">No Data Found</td>
+                                    </tr>
+                            @endforelse
                         </table>
                     </div>
                     <div class="container custom_pagination">
