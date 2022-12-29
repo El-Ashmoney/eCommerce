@@ -2,22 +2,54 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="author" content="Blank Cart Admin">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <title>Product Info</title>
     </head>
     <body>
-        @include('sweetalert::alert')
-        Customer Name: <h1>{{ $order->name }}</h1>
-        Customer Email: <h1>{{ $order->email }}</h1>
-        Customer Phone: <h1>{{ $order->phone }}</h1>
-        Customer Address: <h1>{{ $order->address }}</h1>
-        Customer Product : <h1>{{ $order->product_title }}</h1>
-        Customer Product Quantity: <h1>{{ $order->product_quantity }}</h1>
-        Customer Product Price: <h1>${{ $order->product_price }}</h1>
-        Customer Payment Status: <h1>{{ $order->payment_status }}</h1>
-        Customer Delivery Status: <h1>{{ $order->delivery_status }}</h1>
-        Product Image: <br>
-        <img src="/product/{{ $order->product_image }}" style="width: 450px; height: 250px" alt="">
+        <div class="download_pdf container">
+            <div style="margin-bottom: 20px">
+                <strong style="margin-right: 20px" class="details_header">Customer Name:</strong>
+                <span>{{ $order->name }}</span>
+            </div>
+            <div style="margin-bottom: 20px">
+                <strong style="margin-right: 20px" class="details_header">Customer Email:</strong>
+                <span>{{ $order->email }}</span>
+            </div>
+            <div style="margin-bottom: 20px">
+                <strong style="margin-right: 20px" class="details_header">Customer Phone:</strong>
+                <span>{{ $order->phone }}</span>
+            </div>
+            <div style="margin-bottom: 20px">
+                <strong style="margin-right: 20px" class="details_header">Customer Address:</strong>
+                <span>{{ $order->address }}</span>
+            </div>
+            <div style="margin-bottom: 20px">
+                <strong style="margin-right: 20px" class="details_header">Customer Product:</strong>
+                <span>{{ $order->product_title }}</span>
+            </div>
+            <div style="margin-bottom: 20px">
+                <strong style="margin-right: 20px" class="details_header">Customer Product Quantity:</strong>
+                <span>{{ $order->product_quantity }}</span>
+            </div>
+            <div style="margin-bottom: 20px">
+                <strong style="margin-right: 20px" class="details_header">Customer Product Price:</strong>
+                <span>${{ $order->product_price }}</span>
+            </div>
+            <div style="margin-bottom: 20px">
+                <strong style="margin-right: 20px" class="details_header">Customer Payment Status:</strong>
+                <span>{{ $order->payment_status }}</span>
+            </div>
+            <div style="margin-bottom: 20px">
+                <strong style="margin-right: 20px" class="details_header">Customer Delivery Status:</strong>
+                <span>{{ $order->delivery_status }}</span>
+            </div>
+            <div style="margin-bottom: 20px">
+                <strong style="margin-right: 20px" class="details_header">Customer Image:</strong>
+                <div style="margin-top: 20px">
+                    <img class="details_img" src="./product/{{ $order->product_image }}" style="width: 450px; height: 250px" alt="">
+                </div>
+            </div>
+        </div>
     </body>
 </html>

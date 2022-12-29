@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use \PDF;
+use PDF;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Category;
@@ -136,7 +136,7 @@ class AdminController extends Controller
         $order = Order::find($id);
         $pdf = PDF::loadView('admin.pdf', compact('order'));
         Alert::success('Download will start soon','Please check your download folder');
-        return view('admin.pdf', compact('order'));
+        return $pdf->download('order_details.pdf');
     }
 
     public function send_email($id){

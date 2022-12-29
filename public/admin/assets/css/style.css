@@ -21177,6 +21177,8 @@ div.tagsinput {
 .navbar-nav-right .dropdown .dropdown-menu .dropdown-item .preview-item-content .logout:hover{text-decoration: none; color: #fc424a}
 .sidebar .sidebar-brand-wrapper .sidebar-brand img{width: 200px; height: auto; max-width: none;}
 .sidebar .sidebar-brand-wrapper .sidebar-brand.brand-logo-mini img{height: auto; width: 35px; max-width: none;}
-.swal2-title {
-    color: #000 !important;
-}
+.swal2-title {color: #000 !important;}
+.download_pdf .details_header{margin-right: 20px; color: #00d25b}
+.download_pdf div{margin-bottom: 10px;}
+.download_pdf img{ object-fit: contain;}
+.download_pdf .details_img, .download_pdf div:first-of-type{margin-top: 10px;}
