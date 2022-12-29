@@ -15,12 +15,6 @@
                 <div class="content-wrapper">
                     <div class="product">
                         <h1>All Orders</h1>
-                        @if(session()->has('message'))
-                            <div class="alert alert-success">
-                                <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
-                                {{ session()->get('message') }}
-                            </div>
-                        @endif
                         <div class="order_search">
                             <form action="{{ url('search_data') }}" method="GET">
                                 <input type="text" name="search" placeholder="Search for orders by username">

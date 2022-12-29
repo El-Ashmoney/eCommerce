@@ -14,12 +14,6 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="category_page content-wrapper">
-                    @if (session()->has('message'))
-                        <div class="alert alert-success">
-                            <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
-                            {{ session()->get('message') }}
-                        </div>
-                    @endif
                     <div class="add_category">
                         <h2>Add Category</h2>
                         <form action="{{ url('/add_category') }}" method="POST">
