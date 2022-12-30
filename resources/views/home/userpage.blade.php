@@ -76,19 +76,19 @@
                 localStorage.setItem('scrollpos', window.scrollY);
             };
 
-            var selector, elems, makeActive;
-            selector = '.navbar-nav li';
-            elems = document.querySelectorAll(selector);
-            makeActive = function () {
-                for (var i = 0; i < elems.length; i++)
-                    elems[i].classList.remove('active');
-                this.classList.add('active');
-            };
-            for (var i = 0; i < elems.length; i++)
-                elems[i].addEventListener('mousedown', makeActive);
+            // var selector, elems, makeActive;
+            // selector = '.navbar-nav li';
+            // elems = document.querySelectorAll(selector);
+            // makeActive = function () {
+            //     for (var i = 0; i < elems.length; i++)
+            //         elems[i].classList.remove('active');
+            //     this.classList.add('active');
+            // };
+            // for (var i = 0; i < elems.length; i++)
+            //     elems[i].addEventListener('mousedown', makeActive);
         </script>
         <!-- jQery -->
-        <script src="jhome/js/jquery-3.4.1.min.js"></script>
+        <script src="home/js/jquery-3.4.1.min.js"></script>
         <!-- popper js -->
         <script src="home/js/popper.min.js"></script>
         <!-- bootstrap js -->

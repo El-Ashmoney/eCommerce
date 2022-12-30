@@ -58,7 +58,7 @@
             };
         </script>
         <!-- jQery -->
-        <script src="jhome/js/jquery-3.4.1.min.js"></script>
+        <script src="home/js/jquery-3.4.1.min.js"></script>
         <!-- popper js -->
         <script src="home/js/popper.min.js"></script>
         <!-- bootstrap js -->

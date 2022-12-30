@@ -112,12 +112,12 @@
         </script>
         {{-- Custom JS --}}
         <!-- jQery -->
-        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="home/js/jquery-3.4.1.min.js"></script>
         <!-- popper js -->
-        <script src="js/popper.min.js"></script>
+        <script src="home/js/popper.min.js"></script>
         <!-- bootstrap js -->
-        <script src="js/bootstrap.js"></script>
+        <script src="home/js/bootstrap.js"></script>
         <!-- custom js -->
-        <script src="js/custom.js"></script>
+        <script src="home/js/custom.js"></script>
     </body>
 </html>
