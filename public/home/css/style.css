@@ -151,7 +151,8 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  color: #f7444e;
+    color: #f7444e;
+    border-bottom: 5px solid;
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link svg, .custom_nav-container .navbar-nav .nav-item.active .nav-link svg {
@@ -1153,6 +1154,7 @@ form input[type="submit"]:focus {
 .page-item .active .page-link{background-color: #f7444e; border-color: #f7444e;}
 .custom_pagination{display: flex; justify-content: center; justify-items: center;}
 .relative .relative button{font-size: 16px;}
+.custom_nav-container .navbar-nav .nav-link{font-size: 20px;}
 .custom_nav-container .navbar-nav .nav-link:hover .nav-link, .custom_nav-container .navbar-nav .nav-item .active {color: #f7444e;}
 
 /* http://kute-themes.com/html/boutique/html/index.html

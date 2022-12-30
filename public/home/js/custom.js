@@ -1,7 +1,8 @@
 const activePage = window.location.pathname;
-const navLinks = document.querySelectorAll('nav .nav-item a');
+const navLinks = document.querySelectorAll('nav .nav-item');
 navLinks.forEach(link => {
-    if(link.href.includes(`${activePage}`)){
+    const dataPage = link.getAttribute('data-page');
+    if(dataPage && dataPage.includes(`${activePage}`)){
         link.classList.add('active');
     }
 })

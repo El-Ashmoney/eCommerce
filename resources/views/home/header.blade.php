@@ -7,20 +7,20 @@
             </button>
             <div class="navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav" id="headerLinks">
-                    <li class="nav-item">
+                    <li class="nav-item" data-page="/">
                         <a class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-page="/products">
                         <a class="nav-link" href="{{ url('products') }}">Products</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-page="/contact">
                         <a class="nav-link" href="{{ url('contact') }}">Contact</a>
                     </li>
                     @auth
-                    <li class="nav-item">
+                    <li class="nav-item" data-page="/show_cart">
                         <a class="nav-link" href="{{ url('show_cart') }}">Cart</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-page="/show_order">
                         <a class="nav-link" href="{{ url('show_order') }}">Order</a>
                     </li>
                     @if(Auth::user()->usertype == 1)
