@@ -137,7 +137,7 @@ a:focus {
     color: #131313;
     text-align: center;
     text-transform: uppercase;
-    border-radius: 5px;
+    border-radius: 10px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     font-weight: 700;
@@ -149,11 +149,10 @@ a:focus {
   fill: #000000;
   margin-bottom: 2px;
 }
-
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
     color: #f7444e;
-    border-bottom: 5px solid;
 }
+.custom_nav-container .navbar-nav .nav-item.active .nav-link{border-bottom: 5px solid; color: #FFF; background-color: #f7444e;}
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link svg, .custom_nav-container .navbar-nav .nav-item.active .nav-link svg {
   fill: #f7444e;
