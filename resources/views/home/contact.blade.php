@@ -4,6 +4,7 @@
         @include('home.css')
     </head>
     <body class="sub_page">
+    @include('sweetalert::alert')
         <div class="hero_area">
             <!-- header section strats -->
             @include('home.header')
@@ -27,13 +28,26 @@
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2">
                             <div class="full">
-                                <form action="{{ url('/') }}">
+                                <form action="{{ url('/contact') }}" method="POST">
+                                    @csrf
                                     <fieldset>
-                                        <input type="text" placeholder="Enter your full name" name="name" required />
-                                        <input type="email" placeholder="Enter your email address" name="email" required />
-                                        <input type="text" placeholder="Enter subject" name="subject" required />
-                                        <textarea placeholder="Enter your message" required></textarea>
-                                        <input type="submit" value="Submit" />
+                                        <input class="form-control" type="text" placeholder="Enter your full name" name="name" />
+                                        @if($errors->has('name'))
+                                            <small class="form-text invalid-feedback">{{ $errors->first('name') }}</small>
+                                        @endif
+                                        <input type="email" placeholder="Enter your email address" name="email" />
+                                        @if($errors->has('email'))
+                                            <small class="form-text invalid-feedback">{{ $errors->first('email') }}</small>
+                                        @endif
+                                        <input type="text" placeholder="Enter subject" name="subject" />
+                                        @if($errors->has('subject'))
+                                            <small class="form-text invalid-feedback">{{ $errors->first('subject') }}</small>
+                                        @endif
+                                        <textarea placeholder="Enter your message" name="message"></textarea>
+                                        @if($errors->has('message'))
+                                            <small class="form-text invalid-feedback">{{ $errors->first('message') }}</small>
+                                        @endif
+                                        <button type="submit">Submit</button>
                                     </fieldset>
                                 </form>
                             </div>

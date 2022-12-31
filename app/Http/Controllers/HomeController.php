@@ -221,8 +221,4 @@ class HomeController extends Controller
         $products = Product::orderBy('id', 'DESC')->paginate(6);
         return view('home.all_products', compact('products'));
     }
-
-    public function contact(){
-        return view('home.contact');
-    }
 }
