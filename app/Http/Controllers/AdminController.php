@@ -165,7 +165,7 @@ class AdminController extends Controller
         return view('admin.order', compact('orders'));
     }
 
-    public function logout(Request $request) {
+    public function logout() {
         Auth::logout();
         return redirect('/login');
     }
