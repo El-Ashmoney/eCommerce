@@ -161,7 +161,7 @@ class AdminController extends Controller
 
     public function search_data(Request $request){
         $searchInput = $request->search;
-        $orders = Order::where('name', 'LIKE', "%$searchInput%")->paginate(5);
+        $orders = Order::where('name', 'LIKE', "%$searchInput%")->orderBy('id', 'DESC')->paginate(5);
         return view('admin.order', compact('orders'));
     }
 
