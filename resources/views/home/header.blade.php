@@ -1,6 +1,6 @@
 <header class="header_section">
     <div class="container">
-        <nav class="headerLinks navbar navbar-expand-lg custom_nav-container">
+        <nav class="headerLinks navbar navbar-expand-lg custom_nav-container navbar-fixed-top">
             <a class="navbar-brand" href="{{ url('/') }}"><img width="250" src="/images/logo.png" alt="#" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"  aria-label="Toggle navigation">
                 <span class=""> </span>
@@ -31,13 +31,13 @@
                     @endauth
                     @if (Route::has('login'))
                         @auth
-                            <li class="nav-item">
+                            <li class="login-register nav-item">
                                 <x-app-layout>
 
                                 </x-app-layout>
                             </li>
                         @else
-                            <li class="nav-item" style="padding-top: 13px">
+                            <li class="nav-item" style="padding-top: 13px; margin-left: 15px">
                                 <a class="btn btn-primary" href="{{ route('login') }}" id="loginCss">Login</a>
                             </li>
                             <li class="nav-item" style="padding-top: 13px">

@@ -21182,3 +21182,4 @@ div.tagsinput {
 .download_pdf div{margin-bottom: 10px;}
 .download_pdf img{ object-fit: contain;}
 .download_pdf .details_img, .download_pdf div:first-of-type{margin-top: 10px;}
+.uppercase{text-transform: uppercase;}

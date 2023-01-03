@@ -30,9 +30,9 @@
                             <td>{{ $cart->product_title }}</td>
                             <td>{{ $cart->product_quantity }}</td>
                             <td>${{ $cart->product_price }}</td>
-                            <td><img class="product-img" src="product/{{ $cart->product_image }}" alt=""></td>
+                            <td><img class="product-img" src="product/{{ $cart->product_image }}" alt="Product Image"></td>
                             <td>
-                                <a href="{{ url('remove_cart', $cart->id) }}" class="btn btn-danger" onclick="confirmation(event)">Remove</a>
+                                <a href="{{ url('remove_cart', $cart->id) }}" class="btn btn-danger uppercase" onclick="confirmation(event)">Remove</a>
                             </td>
                         </tr>
                         <?php $total_price = $total_price + $cart->product_price ?>
@@ -44,19 +44,14 @@
                 @if ($total_price !== 0)
                     <div class="payment-method">
                         <h1>Proceed to pay</h1>
-                        <a href="{{ url('cash_order') }}" class="btn btn-danger">Cash On Delivery</a>
-                        <a href="{{ url('stripe', $total_price) }}" class="btn btn-danger">Pay Using Card</a>
+                        <a href="{{ url('cash_order') }}" class="btn btn-danger uppercase">Cash On Delivery</a>
+                        <a href="{{ url('stripe', $total_price) }}" class="btn btn-danger uppercase">Pay Using Card</a>
                     </div>
                 @endif
             </div>
         <!-- footer start -->
         @include('home.footer')
         <!-- footer end -->
-        <div class="cpy_">
-            <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
-                Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-            </p>
-        </div>
         <!-- jQery -->
         <script src="home/js/jquery-3.4.1.min.js"></script>
         <!-- popper js -->

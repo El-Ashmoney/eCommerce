@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
-  color: #0c0c0c;
-  background-color: #ffffff;
-  overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    color: #0c0c0c;
+    background-color: #ffffff;
+    overflow-x: hidden;
 }
 
 #loginCss{
@@ -133,7 +133,8 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
-    padding: 20px 20px;
+    padding: 8px 0px;
+    margin: 0 15px;
     color: #131313;
     text-align: center;
     text-transform: uppercase;
@@ -459,14 +460,17 @@ a:focus {
 }
 
 .product_section .options .option1 {
-  background-color: #f7444e;
-  border: 1px solid #f7444e;
-  color: #ffffff;
+    background-color: #f7444e;
+    border: 2px solid #f7444e;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .product_section .options .option1:hover {
   background-color: transparent;
-  color: #f7444e;
+  /* color: #f7444e; */
+  color: #000;
 }
 
 .product_section .options .option2 {
@@ -1076,7 +1080,7 @@ form input[type="submit"] {
     background: #333;
     color: #fff;
     font-weight: 600;
-    transition: ease all 0.1s;
+    transition: ease all 0.3s;
 }
 
 form input[type="submit"]:hover,
@@ -1154,7 +1158,7 @@ form input[type="submit"]:focus {
 .relative .relative button{font-size: 16px;}
 .custom_nav-container .navbar-nav .nav-link{font-size: 20px;}
 .custom_nav-container .navbar-nav .nav-link:hover .nav-link, .custom_nav-container .navbar-nav .nav-item .active {color: #f7444e;}
-.custom_nav-container .navbar-nav .nav-item.active .nav-link{border-bottom: 5px solid; color: #FFF; background-color: #f7444e;}
+.custom_nav-container .navbar-nav .nav-item.active .nav-link{border-bottom: 5px solid #f7444e; color: #f7444e; border-radius: 0%;}
 .contact_layout form button{
     border: none;
     padding: 15px 45px;
@@ -1167,7 +1171,7 @@ form input[type="submit"]:focus {
     background: #333;
     color: #fff;
     font-weight: 600;
-    transition: ease all 0.1s;
+    transition: ease-in-out all 0.3s
 }
 
 .contact_layout form button:hover,
@@ -1176,6 +1180,15 @@ form input[type="submit"]:focus {
     color: #fff;
 }
 .contact_layout form .invalid-feedback{display: block;}
+.login-register{margin-left: 15px;}
+.heading_container{align-items: center;}
+.product-details{margin-bottom: 50px;}
+
+/* Custom Scroll bar */
+::-webkit-scrollbar{width: 15px;}
+::-webkit-scrollbar-track{box-shadow: inset 0 0 2px grey; border-radius: 10px;}
+::-webkit-scrollbar-thumb{background: #f7444e; border-radius: 10px;}
+/* Custom Scroll bar */
 /* http://kute-themes.com/html/boutique/html/index.html
 https://template.hasthemes.com/noraure/noraure/index.html
 https://preview.hasthemes.com/xoss-preview/xoss/index.html */

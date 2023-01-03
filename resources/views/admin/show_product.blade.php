@@ -38,8 +38,8 @@
                                         <td>{{ $product->discount_price }}</td>
                                         <td>{{ $product->category }}</td>
                                         <td><img class="product-img" src="/product/{{ $product->image }}" alt=""></td>
-                                        <td><a href="{{ url('/update_product', $product->id) }}" class="btn btn-success">Edit</a></td>
-                                        <td><a href="{{ url('delete_product', $product->id) }}" class="btn btn-danger" onclick="return confirm('Are you sure to delete the product')">Delete</a></td>
+                                        <td><a href="{{ url('/update_product', $product->id) }}" class="btn btn-success uppercase">Edit</a></td>
+                                        <td><a href="{{ url('delete_product', $product->id) }}" class="btn btn-danger uppercase" onclick="return confirm('Are you sure to delete the product')">Delete</a></td>
                                     </tr>
                                     @empty
                                         <tr class="no-data">
