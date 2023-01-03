@@ -9,8 +9,8 @@
             <!-- header section strats -->
             @include('home.header')
             <!-- end header section -->
-            <div class="col-sm-6 col-md-4 col-lg-4" style="margin: auto; width= 50%; padding: 30px">
-                <div class="product-details heading_container">
+            <div class="product-details col-sm-6 col-md-4 col-lg-4" style="margin: auto; width= 50%; padding: 30px">
+                <div class="heading_container">
                     <h2>
                         Product <span>Details</span>
                     </h2>

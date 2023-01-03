@@ -18,7 +18,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 class HomeController extends Controller
 {
     public function index(){
-        $products = Product::paginate(6);
+        $products = Product::orderBy('id', 'DESC')->paginate(6);
         return view('home.userpage', compact('products'));
     }
 
