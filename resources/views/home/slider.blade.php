@@ -20,7 +20,7 @@
                             This week's sale is 20% off everything in the store. Check it out today!
                         </p>
                         <div class="btn-box">
-                            <a href="{{ url('products') }}" class="btn1">Shop Now</a>
+                            <a href="{{ url('products') }}" class="btn1" style="text-transform: uppercase">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                             $60 Gift card, Gift cards are the best incentive here as customers are free to choose their preferred gift and they are going to spend the credits in your ecommerce store – a win-win.
                         </p>
                         <div class="btn-box">
-                            <a href="{{ url('products') }}" class="btn1">Shop Now</a>
+                            <a href="{{ url('products') }}" class="btn1" style="text-transform: uppercase">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                             A giveaway is a blanket term for sweepstakes, contests, and lotteries, as all three of these categories give participants a chance to win prizes.
                         </p>
                         <div class="btn-box">
-                            <a href="{{ url('products') }}" class="btn1">Shop Now</a>
+                            <a href="{{ url('products') }}" class="btn1" style="text-transform: uppercase">Shop Now</a>
                         </div>
                     </div>
                 </div>

@@ -31,13 +31,13 @@
                     @endauth
                     @if (Route::has('login'))
                         @auth
-                            <li class="nav-item">
+                            <li class="login-register nav-item">
                                 <x-app-layout>
 
                                 </x-app-layout>
                             </li>
                         @else
-                            <li class="nav-item" style="padding-top: 13px">
+                            <li class="nav-item" style="padding-top: 13px; margin-left: 15px">
                                 <a class="btn btn-primary" href="{{ route('login') }}" id="loginCss">Login</a>
                             </li>
                             <li class="nav-item" style="padding-top: 13px">

@@ -4,7 +4,7 @@
             <div class="col-md-4">
                 <div class="full">
                     <div class="logo_footer">
-                        <a href="#"><img width="210" src="images/logo.png" alt="#" /></a>
+                        <a href="#"><img width="210" src="/images/logo.png" alt="#" /></a>
                     </div>
                     <div class="information_f">
                         <p><strong>ADDRESS:</strong> Egypt, Cairo</p>
@@ -24,6 +24,7 @@
                                         <li><a href="{{ url('/') }}">Home</a></li>
                                         <li><a href="{{ url('products') }}">Products</a></li>
                                         <li><a href="{{ url('contact') }}">Contact</a></li>
+                                        <li><a href="{{ url('privacy_policy') }}">Privacy Policy</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -31,8 +32,10 @@
                                 <div class="widget_menu">
                                     <h3>Account</h3>
                                     <ul>
-                                        <li><a href="{{ url('show_cart') }}">Cart</a></li>
-                                        <li><a href="{{ url('show_order') }}">Order</a></li>
+                                        @auth
+                                            <li><a href="{{ url('show_cart') }}">Cart</a></li>
+                                            <li><a href="{{ url('show_order') }}">Order</a></li>
+                                        @endauth
                                         <li><a href="{{ route('login') }}">Login</a></li>
                                         <li><a href="{{ url('register') }}">Register</a></li>
                                     </ul>
@@ -51,7 +54,7 @@
                                     <fieldset>
                                         <div class="field">
                                             <input type="email" placeholder="Enter Your Mail" name="email" />
-                                            <input type="submit" value="Subscribe" />
+                                            <input type="submit" style="text-transform: uppercase" value="Subscribe" />
                                         </div>
                                     </fieldset>
                                 </form>

@@ -51,13 +51,13 @@
                                         <td>{{ $order->delivery_status }}</td>
                                         <td class=""><img class="order-img" src="/product/{{ $order->product_image }}" alt=""></td>
                                         <td>
-                                            <a href="{{ url('delete_order', $order->id) }}" class="btn btn-danger" onclick="return confirm('Are you sure to delete the order')">Delete</a>
+                                            <a href="{{ url('delete_order', $order->id) }}" class="btn btn-danger uppercase" onclick="return confirm('Are you sure to delete the order')">Delete</a>
                                             @if ($order->delivery_status == "processing")
-                                                <a href="{{ url('deliver_order', $order->id) }}" class="btn btn-success">Delivered</a>
+                                                <a href="{{ url('deliver_order', $order->id) }}" class="btn btn-success uppercase">Delivered</a>
                                             @endif
                                         </td>
-                                        <td><a href="{{ url('download_pdf', $order->id) }}" class="btn btn-info">Export to PDF</a></td>
-                                        <td><a href="{{ url('send_email', $order->id) }}" class="btn btn-info">Send Email</a></td>
+                                        <td><a href="{{ url('download_pdf', $order->id) }}" class="btn btn-info uppercase">Export</a></td>
+                                        <td><a href="{{ url('send_email', $order->id) }}" class="btn btn-info uppercase">Email</a></td>
                                     </tr>
                                     @empty
                                     <tr class="no-data">

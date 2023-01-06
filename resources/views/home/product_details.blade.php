@@ -5,11 +5,16 @@
     </head>
     <body>
         <div class="hero_area">
+        @include('sweetalert::alert')
             <!-- header section strats -->
             @include('home.header')
             <!-- end header section -->
-
-            <div class="col-sm-6 col-md-4 col-lg-4" style="margin: auto; width= 50%; padding: 30px">
+            <div class="product-details col-sm-6 col-md-4 col-lg-4" style="margin: auto; width= 50%; padding: 30px">
+                <div class="heading_container">
+                    <h2>
+                        Product <span>Details</span>
+                    </h2>
+                </div>
                 <div class="box">
                     <div class="img-box">
                         <img src="/product/{{ $product->image }}" alt="">
@@ -27,7 +32,7 @@
                             </h6>
                             @else
                                 <h6>
-                                    ${{ $product->price }}
+                                    <span style="font-weight: bold">Product Price: </span>${{ $product->price }}
                                 </h6>
                         @endif
                         <h6><span style="font-weight: bold">Product Category:</span> {{ $product->category }}</h6>
@@ -40,7 +45,7 @@
                                     <input type="number" name="quantity" value="1" min="1" style="width: 100px; height: 53px; border-radius: 50px">
                                 </div>
                                 <div class="col-md-4">
-                                    <input class="" type="submit" value="Add To Cart" style="border-radius: 50px">
+                                    <input type="submit" value="Add To Cart" style="border-radius: 50px; text-transform: uppercase">
                                 </div>
                             </div>
                         </form>
@@ -51,11 +56,6 @@
         <!-- footer start -->
         @include('home.footer')
         <!-- footer end -->
-        <div class="cpy_">
-            <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
-                Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-            </p>
-        </div>
         <!-- jQery -->
         <script src="home/js/jquery-3.4.1.min.js"></script>
         <!-- popper js -->

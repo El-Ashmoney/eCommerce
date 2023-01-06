@@ -37,9 +37,9 @@
                                 <td><img class="product-img" src="product/{{ $order->product_image }}" alt=""></td>
                                 <td>
                                     @if ($order->delivery_status == 'processing')
-                                        <a href="{{ url('cancel_order', $order->id) }}" class="btn btn-danger" onclick="return confirm('Are you sure to cancel this order?')">Cancel Order</a>
+                                        <a href="{{ url('cancel_order', $order->id) }}" class="btn btn-danger uppercase" onclick="return confirm('Are you sure to cancel this order?')">Cancel Order</a>
                                     @else
-                                        <button type="button" class="btn btn-warning disabled" style="color: red" disabled aria-disabled="true">Canceled</button>
+                                        <button type="button" class="btn btn-warning disabled uppercase" style="color: red" disabled aria-disabled="true">Canceled</button>
                                     @endif
                                 </td>
                             </tr>

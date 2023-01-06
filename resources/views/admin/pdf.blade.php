@@ -47,7 +47,7 @@
             <div style="margin-bottom: 20px">
                 <strong style="margin-right: 20px" class="details_header">Customer Image:</strong>
                 <div style="margin-top: 20px">
-                    <img class="details_img" src="./product/{{ $order->product_image }}" style="width: 450px; height: 250px" alt="">
+                    <img class="details_img" src="./product/{{ $order->product_image }}" style="width: 100%; height: 100%; object-fit: contain;" alt="">
                 </div>
             </div>
         </div>

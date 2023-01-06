@@ -33,7 +33,7 @@
                                 <td>{{ $category->id }}</td>
                                 <td>{{ $category->category_name }}</td>
                                 <td>
-                                    <a href="{{ url('delete_category', $category->id) }}" class="btn btn-danger" onclick="return confirm('Are you sure to delete the category')">Delete</a>
+                                    <a href="{{ url('delete_category', $category->id) }}" class="btn btn-danger uppercase" onclick="return confirm('Are you sure to delete the category')">Delete</a>
                                 </td>
                             </tr>
                         @endforeach

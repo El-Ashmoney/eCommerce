@@ -10,20 +10,16 @@
             @include('home.header')
             <!-- end header section -->
             <!-- inner page section -->
-            <section class="inner_page_head">
-                <div class="container_fuild">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="full">
-                                <h3>Contact us</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <!-- end inner page section -->
             <!-- why section -->
             <section class="why_section contact_layout layout_padding">
+                <div class="contact-page">
+                    <div class="product-details heading_container">
+                        <h2>
+                            Contact <span>Us</span>
+                        </h2>
+                    </div>
+                </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2">
@@ -47,7 +43,7 @@
                                         @if($errors->has('message'))
                                             <small class="form-text invalid-feedback">{{ $errors->first('message') }}</small>
                                         @endif
-                                        <button type="submit">Submit</button>
+                                        <button type="submit" style="text-transform: uppercase">Submit</button>
                                     </fieldset>
                                 </form>
                             </div>
@@ -59,57 +55,47 @@
             <!-- footer section -->
             <footer class="footer_section">
                 <div class="container">
-                <div class="row">
-                    <div class="col-md-4 footer-col">
-                        <div class="footer_contact">
-                            <h4>Reach at..</h4>
-                            <div class="contact_link_box">
-                                <a href="">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <span>Location</span>
-                                </a>
-                                <a href="">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <span>Call +20 1012734018</span>
-                                </a>
-                                <a href="">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <span>ashmoney@outlook.com</span>
-                                </a>
+                    <div class="row">
+                        <div class="col-md-4 footer-col">
+                            <div class="footer_contact">
+                                <h4>Reach at..</h4>
+                                <div class="contact_link_box">
+                                    <a href="">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span>Location</span>
+                                    </a>
+                                    <a href="">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        <span>Call +20 1012734018</span>
+                                    </a>
+                                    <a href="">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <span>ashmoney@outlook.com</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 footer-col">
+                            <div class="footer_detail">
+                                <a href="{{ url('/') }}" class="footer-logo">Blank Cart</a>
+                                <p>The customer is at the heart of our unique business model, which includes design.</p>
+                                <div class="footer_social">
+                                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                    <a href=""><i class="fa-brands fa-google"></i></a>
+                                    <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 footer-col">
+                            <div class="map_container">
+                                <div class="map">
+                                    <div id="googleMap"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 footer-col">
-                        <div class="footer_detail">
-                            <a href="{{ url('/') }}" class="footer-logo">Blank Cart</a>
-                            <p>Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with</p>
-                            <div class="footer_social">
-                                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                <a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 footer-col">
-                        <div class="map_container">
-                            <div class="map">
-                                <div id="googleMap"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-info">
-                    <div class="col-lg-7 mx-auto px-0">
-                        <p>
-                            &copy; <span id="displayYear"></span> All Rights Reserved By
-                            <a href="https://html.design/">Free Html Templates</a><br>
-
-                            Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-                        </p>
-                    </div>
-                </div>
                 </div>
             </footer>
         <!-- footer section -->
