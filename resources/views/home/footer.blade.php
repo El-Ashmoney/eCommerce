@@ -24,6 +24,7 @@
                                         <li><a href="{{ url('/') }}">Home</a></li>
                                         <li><a href="{{ url('products') }}">Products</a></li>
                                         <li><a href="{{ url('contact') }}">Contact</a></li>
+                                        <li><a href="{{ url('privacy_policy') }}">Privacy Policy</a></li>
                                     </ul>
                                 </div>
                             </div>

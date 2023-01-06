@@ -987,6 +987,7 @@ footer {
     text-transform: uppercase;
     letter-spacing: 0.2px;
     margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 .widget_menu ul {
@@ -999,6 +1000,7 @@ footer {
     float: left;
     width: 100%;
 }
+.widget_menu ul li:hover >a{color: #f7444e;}
 
 .widget_menu ul li a {
     font-size: 15px;

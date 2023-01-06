@@ -65,3 +65,4 @@ Route::get('/contact', [ContactMessageController::class, 'index']);
 Route::post('/contact', [ContactMessageController::class, 'store']);
 Route::get('/products', [HomeController::class, 'products']);
 Route::get('/logout', [AdminController::class, 'logout']);
+Route::get('/privacy_policy', [HomeController::class, 'privacy_policy']);
