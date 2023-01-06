@@ -64,5 +64,6 @@
                 </div>
             </div>
         </div>
+        <div class="copyright"><span>&copy;</span>2023 Blank Cart. All Right Reserved.</div>
     </div>
 </footer>
