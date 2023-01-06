@@ -86,9 +86,13 @@ class HomeController extends Controller
     }
 
     public function show_cart(){
-        $id = Auth::user()->id;
-        $cart = Cart::where('user_id', '=', $id)->get();
-        return view('home.show_cart', compact('cart'));
+        if(Auth::user()){
+            $id = Auth::user()->id;
+            $cart = Cart::where('user_id', '=', $id)->get();
+            return view('home.show_cart', compact('cart'));
+        }else{
+            return redirect('login');
+        }
     }
 
     public function remove_cart($id){
@@ -165,10 +169,14 @@ class HomeController extends Controller
     }
 
     public function show_order(){
-        $user = Auth::user();
-        $userId = $user->id;
-        $orders = Order::where('user_id', '=', $userId)->orderBy('id', 'DESC')->paginate(5);
-        return view('home.show_order', compact('orders'));
+        if(Auth::user()){
+            $user = Auth::user();
+            $userId = $user->id;
+            $orders = Order::where('user_id', '=', $userId)->orderBy('id', 'DESC')->paginate(5);
+            return view('home.show_order', compact('orders'));
+        }else{
+            return redirect('login');
+        }
     }
 
     public function cancel_order($id){

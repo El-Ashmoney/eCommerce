@@ -51,7 +51,7 @@
                 <span class="menu-icon">
                     <i class="mdi mdi-web"></i>
                 </span>
-                <span class="menu-title">Blank Cart</span>
+                <span class="menu-title uppercase">Blank Cart</span>
             </a>
         </li>
         <li class="nav-item menu-items">
