@@ -45,7 +45,7 @@
                                     <input type="number" name="quantity" value="1" min="1" style="width: 100px; height: 53px; border-radius: 50px">
                                 </div>
                                 <div class="col-md-4">
-                                    <input class="" type="submit" value="Add To Cart" style="border-radius: 50px">
+                                    <input type="submit" value="Add To Cart" style="border-radius: 50px; text-transform: uppercase">
                                 </div>
                             </div>
                         </form>

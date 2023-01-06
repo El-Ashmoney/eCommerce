@@ -31,8 +31,10 @@
                                 <div class="widget_menu">
                                     <h3>Account</h3>
                                     <ul>
-                                        <li><a href="{{ url('show_cart') }}">Cart</a></li>
-                                        <li><a href="{{ url('show_order') }}">Order</a></li>
+                                        @auth
+                                            <li><a href="{{ url('show_cart') }}">Cart</a></li>
+                                            <li><a href="{{ url('show_order') }}">Order</a></li>
+                                        @endauth
                                         <li><a href="{{ route('login') }}">Login</a></li>
                                         <li><a href="{{ url('register') }}">Register</a></li>
                                     </ul>
@@ -51,7 +53,7 @@
                                     <fieldset>
                                         <div class="field">
                                             <input type="email" placeholder="Enter Your Mail" name="email" />
-                                            <input type="submit" value="Subscribe" />
+                                            <input type="submit" style="text-transform: uppercase" value="Subscribe" />
                                         </div>
                                     </fieldset>
                                 </form>

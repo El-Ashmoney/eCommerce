@@ -1,7 +1,7 @@
 <section class="client_section layout_padding">
     <div class="container">
         <div class="heading_container heading_center">
-            <h2>Customer's Testimonial</h2>
+            <h2>Customer's <span style="color: #f7444e">Testimonial</span></h2>
         </div>
         <div id="carouselExample3Controls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">

@@ -43,7 +43,7 @@
                                         @if($errors->has('message'))
                                             <small class="form-text invalid-feedback">{{ $errors->first('message') }}</small>
                                         @endif
-                                        <button type="submit">Submit</button>
+                                        <button type="submit" style="text-transform: uppercase">Submit</button>
                                     </fieldset>
                                 </form>
                             </div>
@@ -61,7 +61,7 @@
                                 <h4>Reach at..</h4>
                                 <div class="contact_link_box">
                                     <a href="">
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <i class="fa-solid fa-location-dot"></i>
                                         <span>Location</span>
                                     </a>
                                     <a href="">
@@ -78,13 +78,13 @@
                         <div class="col-md-4 footer-col">
                             <div class="footer_detail">
                                 <a href="{{ url('/') }}" class="footer-logo">Blank Cart</a>
-                                <p>Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with</p>
+                                <p>The customer is at the heart of our unique business model, which includes design.</p>
                                 <div class="footer_social">
-                                    <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                    <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                    <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    <a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                    <a href=""><i class="fa-brands fa-google"></i></a>
+                                    <a href=""><i class="fa-brands fa-pinterest"></i></a>
                                 </div>
                             </div>
                         </div>
