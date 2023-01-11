@@ -49,4 +49,19 @@
             </div>
         </nav>
     </div>
+    <section class="verifie_user container">
+        @auth
+            @if($verifiedUser->email_verified_at == Null)
+                <p class="uppercase text-center" style="color: red; font-weight: 600"><i class="fa-solid fa-triangle-exclamation"></i> please verifiy your email by checking your email inbox</p>
+                <p class="text-center">
+                    <button type="button" class="underline text-sm text-gray-600 hover:text-gray-900 text-center" wire:click.prevent="sendEmailVerification">
+                        Click here to re-send the verification email.
+                    </button>
+                    <p v-show="verificationLinkSent" class="mt-2 font-medium text-sm text-green-600 text-center">
+                        A new verification link has been sent to your email address.
+                    </p>
+                </p>
+            @endif
+        @endauth
+    </section>
 </header>

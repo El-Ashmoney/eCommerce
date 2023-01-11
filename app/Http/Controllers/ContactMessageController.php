@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\ContactMail;
 use App\Models\Contact;
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class ContactMessageController extends Controller
 {
     public function index(){
-        return view('home.contact');
+        $verifiedUser = Auth::user();
+        return view('home.contact',compact('verifiedUser'));
     }
 
     public function store(Request $request){

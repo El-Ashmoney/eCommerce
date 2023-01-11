@@ -1055,7 +1055,6 @@ form input {
     width: 100%;
     font-size: 14px;
     margin-bottom: 20px;
-    text-transform: capitalize;
     line-height: normal;
 }
 
@@ -1154,7 +1153,7 @@ form input[type="submit"]:focus {
 .comment_section .box .comments_form input{
     font-size: 20px;
     border-radius: 5px;
-    background-color: red;
+    background-color: #f7444e;
     color: #FFF;
     display: block;
     text-align: center;
@@ -1183,7 +1182,7 @@ form input[type="submit"]:focus {
     font-size: 16px;
     text-transform: capitalize;
     line-height: normal;
-    margin: 64px auto;
+    margin: 70px auto;
     display: flex;
     background: #333;
     color: #fff;

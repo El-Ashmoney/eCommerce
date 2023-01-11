@@ -19,7 +19,8 @@ class HomeController extends Controller
 {
     public function index(){
         $products = Product::orderBy('id', 'DESC')->paginate(6);
-        return view('home.userpage', compact('products'));
+        $verifiedUser = Auth::user();
+        return view('home.userpage', compact('products', 'verifiedUser'));
     }
 
     public function redirect(){
@@ -37,14 +38,16 @@ class HomeController extends Controller
             $ongoing_orders     = Order::where('delivery_status', '=', 'processing')->get()->count();
             return view('admin.home', compact('products', 'orders', 'users', 'total_revenues', 'delivered_orders', 'ongoing_orders'));
         }else{
+            $verifiedUser = Auth::user();
             $products = Product::orderBy('id', 'DESC')->paginate(6);
-            return view('home.userpage', compact('products'));
+            return view('home.userpage', compact('products', 'verifiedUser'));
         }
     }
 
     public function product_details($id){
         $product = Product::find($id);
-        return view('home.product_details', compact('product'));
+        $verifiedUser = Auth::user();
+        return view('home.product_details', compact('product', 'verifiedUser'));
     }
 
     public function add_cart(Request $request, $id){
@@ -89,7 +92,8 @@ class HomeController extends Controller
         if(Auth::user()){
             $id = Auth::user()->id;
             $cart = Cart::where('user_id', '=', $id)->get();
-            return view('home.show_cart', compact('cart'));
+            $verifiedUser = Auth::user();
+            return view('home.show_cart', compact('cart', 'verifiedUser'));
         }else{
             return redirect('login');
         }
@@ -131,7 +135,8 @@ class HomeController extends Controller
 
     public function stripe($total_price){
         Alert::success('We received your order','We will be contact with you soon');
-        return view('home.stripe', compact('total_price'));
+        $verifiedUser = Auth::user();
+        return view('home.stripe', compact('total_price', 'verifiedUser'));
     }
 
     public function stripePost(Request $request, $total_price){
@@ -173,7 +178,8 @@ class HomeController extends Controller
             $user = Auth::user();
             $userId = $user->id;
             $orders = Order::where('user_id', '=', $userId)->orderBy('id', 'DESC')->paginate(5);
-            return view('home.show_order', compact('orders'));
+            $verifiedUser = Auth::user();
+            return view('home.show_order', compact('orders', 'verifiedUser'));
         }else{
             return redirect('login');
         }
@@ -190,7 +196,8 @@ class HomeController extends Controller
         if(Auth::id()){
             $comments = Comment::orderby('id','DESC')->get();
             $replies = Reply::orderby('id','DESC')->get();
-            return view('home.show_comments', compact('comments', 'replies'));
+            $verifiedUser = Auth::user();
+            return view('home.show_comments', compact('comments', 'replies', 'verifiedUser'));
         }else{
             return redirect('login');
         }
@@ -222,15 +229,18 @@ class HomeController extends Controller
     public function product_search(Request $request){
         $search_text = $request->search;
         $products = Product::where('title', 'LIKE', "%$search_text%")->orWhere('category', 'LIKE', "%$search_text%")->paginate(5);
-        return view('home.userpage', compact('products'));
+        $verifiedUser = Auth::user();
+        return view('home.userpage', compact('products', 'verifiedUser'));
     }
 
     public function products(){
         $products = Product::orderBy('id', 'DESC')->paginate(6);
-        return view('home.all_products', compact('products'));
+        $verifiedUser = Auth::user();
+        return view('home.all_products', compact('products', 'verifiedUser'));
     }
 
     public function privacy_policy(){
-        return view('home.privacy_policy');
+        $verifiedUser = Auth::user();
+        return view('home.privacy_policy', compact('verifiedUser'));
     }
 }
