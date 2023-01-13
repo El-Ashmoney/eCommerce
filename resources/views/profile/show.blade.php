@@ -4,7 +4,21 @@
             {{ __('Profile') }}
         </h2>
     </x-slot>
-
+    <div style="border: 1px soild #f7444a;" class="flex justify-center">
+        <a href="/" class="uppercase" style="
+            font-weight: 700;
+            color: #FFF;
+            font-size: 20px;
+            border: 1px solid #f7444e;
+            border-radius: 25px;
+            padding: 5px 10px;
+            margin-top: 20px;
+            background-color: #f7444e;
+            "
+        >
+            <i class="fa-solid fa-globe white" style="padding-top: 4px"></i> Website
+        </a>
+    </div>
     <div>
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
             @if (Laravel\Fortify\Features::canUpdateProfileInformation())
