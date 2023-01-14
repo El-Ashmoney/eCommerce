@@ -1130,6 +1130,7 @@ form input[type="submit"]:focus {
 .panel .require-validation .form-group .form-control{height: 40px; font-size: 15px;border: none; border-bottom: 2px solid #911a6c;}
 .panel .require-validation .pay-now{text-align: center;}
 .panel .require-validation .card{border: none;}
+.product_section form .search_product{width: 500px;}
 .product_section .custom-paginate svg{width: 5%;}
 .product_section .custom-paginate div a, .product_section .custom-paginate .flex span:first-of-type{background-color: #911A6B !important; color: #FFF;}
 .product_section .custom-paginate nav div:first-of-type{margin-bottom: 20px;}
@@ -1201,7 +1202,7 @@ form input[type="submit"]:focus {
 .product-details{margin-bottom: 50px;}
 .product-details .img-box img {width: 100%; height: 100%; object-fit: contain;}
 .page-item.active .page-link{color: #FFF; background-color: #f7444e; border-color: #f7444e;}
-.copyright{text-align: center;}
+.copyright{font-weight: bold; letter-spacing: 1px; text-align: center;}
 
 /* Custom Scroll bar */
 ::-webkit-scrollbar{width: 15px;}

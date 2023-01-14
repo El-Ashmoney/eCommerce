@@ -8,7 +8,7 @@
             <div>
                 <form action="{{ url('product_search') }}" method="GET">
                     @csrf
-                    <input style="width: 500px" type="text" name="search" placeholder="Search By Product Title Or Category">
+                    <input class="search_product" type="text" name="search" placeholder="Search By Product Title Or Category">
                     <input type="submit" value="Search" style="text-transform: uppercase">
                 </form>
             </div>

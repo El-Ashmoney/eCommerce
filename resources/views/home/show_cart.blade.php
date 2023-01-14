@@ -32,7 +32,7 @@
                             <td>${{ $cart->product_price }}</td>
                             <td><img class="product-img" src="product/{{ $cart->product_image }}" alt="Product Image"></td>
                             <td>
-                                <a href="{{ url('remove_cart', $cart->id) }}" class="btn btn-danger uppercase" onclick="confirmation(event)">Remove</a>
+                                <a href="{{ url('remove_cart', $cart->id) }}" class="btn btn-danger uppercase" onclick="confirmation(event)"><i class="fa-solid fa-trash"></i></a>
                             </td>
                         </tr>
                         <?php $total_price = $total_price + $cart->product_price ?>

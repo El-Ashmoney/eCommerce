@@ -92,11 +92,13 @@
                             <div class="map_container">
                                 <div class="map">
                                     <div id="googleMap"></div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="copyright text-center"><span>&copy;</span>2023 Blank Cart. All Right Reserved.</div>
             </footer>
         <!-- footer section -->
         {{-- Custom JS --}}

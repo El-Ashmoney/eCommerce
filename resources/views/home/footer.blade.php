@@ -54,7 +54,7 @@
                                     <fieldset>
                                         <div class="field">
                                             <input type="email" placeholder="Enter Your Mail" name="email" />
-                                            <input type="submit" style="text-transform: uppercase" value="Subscribe" />
+                                            <input class="subscribe_btn" type="submit" style="text-transform: uppercase" value="Subscribe" />
                                         </div>
                                     </fieldset>
                                 </form>
