@@ -49,7 +49,8 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ url('/') }}" target="_blank">
                 <span class="menu-icon">
-                    <i class="mdi mdi-web"></i>
+                    <img src="/admin/assets/images/world-wide-web.svg" style="width: 100%" alt="package" />
+                    {{-- <i class="mdi mdi-web"></i> --}}
                 </span>
                 <span class="menu-title uppercase">Blank Cart</span>
             </a>

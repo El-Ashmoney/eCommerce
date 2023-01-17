@@ -163,7 +163,8 @@
                         <div class="dropdown-item preview-item">
                             <div class="preview-thumbnail">
                                 <div class="preview-icon bg-dark rounded-circle">
-                                    <i class="mdi mdi-settings text-success"></i>
+                                    <img src="/admin/assets/images/traffic-barrier.svg" style="width: 100%" alt="package" />
+                                    {{-- <i class="mdi mdi-settings text-success"></i> --}}
                                 </div>
                             </div>
                             <div class="preview-item-content">
@@ -174,7 +175,8 @@
                         <div class="dropdown-item preview-item">
                             <div class="preview-thumbnail">
                                 <div class="preview-icon bg-dark rounded-circle">
-                                    <i class="mdi mdi-logout text-danger"></i>
+                                    <img src="/admin/assets/images/logout.svg" style="width: 100%" alt="package" />
+                                    {{-- <i class="mdi mdi-logout text-danger"></i> --}}
                                 </div>
                             </div>
                             <div class="preview-item-content">

@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\ContactMessageController;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\StripePaymentController;
+use App\Http\Controllers\ContactMessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,3 +67,4 @@ Route::post('/contact', [ContactMessageController::class, 'store']);
 Route::get('/products', [HomeController::class, 'products']);
 Route::get('/logout', [AdminController::class, 'logout']);
 Route::get('/privacy_policy', [HomeController::class, 'privacy_policy']);
+

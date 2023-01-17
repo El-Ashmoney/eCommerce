@@ -13,7 +13,8 @@
                             </div>
                             <div class="col-3">
                                 <div class="icon icon-box-success ">
-                                    <span class="mdi mdi-chart-pie icon-item"></span>
+                                    <img src="/admin/assets/images/package.svg" style="width: 100%" alt="package" />
+                                    {{-- <span class="mdi mdi-chart-pie icon-item"></span> --}}
                                 </div>
                             </div>
                         </div>
@@ -32,7 +33,8 @@
                             </div>
                             <div class="col-3">
                                 <div class="icon icon-box-success">
-                                    <span class="mdi mdi-chart-pie icon-item"></span>
+                                    <img src="/admin/assets/images/checkout.svg" style="width: 100%" alt="package" />
+                                    {{-- <span class="mdi mdi-chart-pie icon-item"></span> --}}
                                 </div>
                             </div>
                         </div>
@@ -51,7 +53,8 @@
                             </div>
                             <div class="col-3">
                                 <div class="icon icon-box-danger">
-                                    <span class="mdi mdi-account-plus icon-item"></span>
+                                    <img src="/admin/assets/images/client.svg" style="width: 100%" alt="package" />
+                                    {{-- <span class="mdi mdi-account-plus icon-item"></span> --}}
                                 </div>
                             </div>
                         </div>
@@ -70,7 +73,8 @@
                             </div>
                             <div class="col-3">
                                 <div class="icon icon-box-success ">
-                                    <span class="mdi mdi-cash-multiple icon-item"></span>
+                                    <img src="/admin/assets/images/salary.svg" style="width: 100%" alt="package" />
+                                    {{-- <span class="mdi mdi-cash-multiple icon-item"></span> --}}
                                 </div>
                             </div>
                         </div>
@@ -89,7 +93,8 @@
                             </div>
                             <div class="col-3">
                                 <div class="icon icon-box-success ">
-                                    <span class="mdi mdi-truck-delivery icon-item"></span>
+                                    <img src="/admin/assets/images/shipped.svg" style="width: 100%" alt="package" />
+                                    {{-- <span class="mdi mdi-truck-delivery icon-item"></span> --}}
                                 </div>
                             </div>
                         </div>
@@ -108,7 +113,8 @@
                             </div>
                             <div class="col-3">
                                 <div class="icon icon-box-success ">
-                                    <span class="mdi mdi-spin mdi-cached icon-item"></span>
+                                    <img class="rotating" src="/admin/assets/images/loading.svg" style="width: 100%" alt="package" />
+                                    {{-- <span class="mdi mdi-spin mdi-cached icon-item"></span> --}}
                                 </div>
                             </div>
                         </div>
